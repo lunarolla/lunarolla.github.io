@@ -1,12 +1,11 @@
 
 @font-face {
-    font-family: STRYDE; /* Имя шрифта */
-    src: url(StRyde-Regular.otf); /* Путь к файлу со шрифтом */
-   }
+    font-family: STRYDE;
+    src: url(StRyde-Regular.otf);
+}
 body{
 	border-top:5px solid #a292b3;
 }
-
 header{
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -14,7 +13,6 @@ header{
 header nav a{
 	margin-left: 50px;
 }
-
 header .navbar-nav a img{
 	vertical-align: baseline;
 	margin-right: 10px;
@@ -23,13 +21,10 @@ header .navbar-nav a img{
 	outline-color: #ab96c1;
 	text-decoration: none;
 }
-
-
 #logo{
 	color:#ac9ebb;
 	font-size: 20pt;
 }
-
 .carousel-control-prev-icon, .carousel-control-next-icon {
   height: 65px;
   width: 35px;
@@ -37,12 +32,10 @@ header .navbar-nav a img{
   background-color:  #82699d;
   background-image: none;
 }
-
 .carousel-control-next-icon
 {
   background-image:  url(right.png);
 }
-
 .carousel-control-prev-icon {
   background-image:  url(left.png);
 }
@@ -52,7 +45,6 @@ header .navbar-nav a img{
 .carousel-control-next{
 	justify-content: flex-end;
 }
-
 #carouselExampleControls h1
 {
 	font-family: STRYDE;
@@ -72,30 +64,23 @@ header .navbar-nav a img{
 	padding-left:20px;
 	padding-right:20px;
 }
-
 #text strong{
 	color:#82699d;
 }
-
 #content div{
 	padding-top: 40px;
 }
-
 #content div h3{
 	padding-top: 30px;
 }
-
 #content div p{
 	color:#a4a4a4;
 	padding-top: 10px;
 }
-
 #content div p a{
 	display: block;
 	color:#a4a4a4;
 }
-
-
 #content div p a::after{
 	content: url(contentArray.png);
 }
@@ -103,28 +88,22 @@ header .navbar-nav a img{
 	outline: none;
 	text-decoration: none;
 	color: #888787;
-
 }
-
 #content2 h4{
 	margin-top: 40px;
 }
-
 hr{
     border: none; 
     margin-top: -15px;
     border: 1px dotted #e2e2e2;
      border-style: none none dotted;
 }
-
 #lines{
 	padding-top: 70px;
 }
-
 #content3{
 	min-height: 10vh;
 }
-
 #content3 div{
 	background-color: #f5f5f5;
 	border: 1px solid #e4e4e4;
@@ -133,21 +112,17 @@ hr{
 	margin-top: 30px;
 	margin-bottom: 60px;
 }
-
 #content4{
 	background-color: #e4e4e4;
 	min-height: 10vh;
 	border-bottom: 10px solid #82699d;
 }
-
 #content5{
 	padding-top: 20px;
 }
-
 #content6 img{
 	margin-left: 30px;
 }
-
 #content6 a img:hover{
 	background-color: #ab96c1;
 	border-radius: 40px;
@@ -190,9 +165,8 @@ hr{
 		padding-top: 10px;
 	}
 	#content2 h4{
-	margin-top: 10px;
-}
-
+		margin-top: 10px;
+	}
 }
 
 
