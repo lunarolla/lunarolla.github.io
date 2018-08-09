@@ -177,6 +177,24 @@ hr{
 	#content5 div{
 		font-size: 10pt;
 	}
+	#content6 img{
+		margin-left: 10px;
+	}
+	#content6 img:fist-child{
+		margin-left: 0;
+	}
+	#content2 h4{
+		font-size: 16pt;
+	}
+	#lines{
+		padding-top: 10px;
+	}
+	#content2 h4{
+	margin-top: 10px;
+}
+
+}
+
 
 @media screen and (min-width: 770px) and (max-width: 980px) {
 	#content3 div{
