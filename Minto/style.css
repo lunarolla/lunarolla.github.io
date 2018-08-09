@@ -155,7 +155,7 @@ hr{
 	#content6 img{
 		margin-left: 10px;
 	}
-	#content6 img:fist-child{
+	#content6 img:first-child{
 		margin-left: 0;
 	}
 	#content2 h4{
