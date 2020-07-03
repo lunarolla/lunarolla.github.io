@@ -360,6 +360,8 @@ input[type=button]
         left: 33%
 
 @media (min-width: 767px) and (max-width:990px)
+    .modal-content
+        width: 500px
     .container 
         padding-left: 20px
         padding-right: 20px
@@ -394,8 +396,9 @@ input[type=button]
         padding-right: 70px
     .dropdown-content
         left: 33%
-
 @media (min-width: 600px) and (max-width:766px)
+    .modal-content
+        width: 450px
     .container 
         padding-left: 10px
         padding-right: 10px
@@ -441,6 +444,12 @@ input[type=button]
         &_items
             margin-top: 30px
 @media (min-width: 480px) and (max-width:599px)
+    .modal-content
+        width: 300px
+        &_header
+            font-size: 25px
+    input[type=text], input[type=button], textarea
+        width: 250px
     .container 
         padding-left: 10px
         padding-right: 10px
@@ -493,6 +502,12 @@ input[type=button]
             height: 45px
             font-size: 12px
 @media (min-width: 320px) and (max-width:479px)
+    .modal-content
+        width: 250px
+        &_header
+            font-size: 20px
+    input[type=text], input[type=button], textarea
+        width: 230px
     .container 
         padding-left: 10px
         padding-right: 10px
@@ -516,6 +531,7 @@ input[type=button]
         &_header
             font-size: 18px
     .header
+        height: 700px
         &_info
             display: none
         &_logo
@@ -544,7 +560,8 @@ input[type=button]
             &_link
                 font-size: 14px
         &_promotext
-            font-size: 25px
+            font-size: 20px
+            padding-top: 150px
     .hamburger
         display: block
         position: absolute
