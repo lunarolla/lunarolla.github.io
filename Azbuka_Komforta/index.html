@@ -50,6 +50,11 @@
                     </div>
                 </ul>
             </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
         <div class="container">
             <div class="header_promotext">Создаем оборудование по чертежам заказчика<br>Проектирование аналогов имеющегося оборудования<br>Лучшее качество за разумные деньги!</div>
@@ -207,6 +212,25 @@
             modal.style.display = "none";
           }
         }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const menu = document.querySelector('.header_menu'),
+            menuItem = document.querySelectorAll('.header_menu_item'),
+            hamburger = document.querySelector('.hamburger');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('hamburger_active');
+                menu.classList.toggle('header_menu_active');
+            });
+
+            menuItem.forEach(item => {
+                item.addEventListener('click', () => {
+                    hamburger.classList.toggle('hamburger_active');
+                    menu.classList.toggle('header_menu_active');
+                })
+            })
+        })
     </script>
 </body>
 </html>
+
