@@ -1,10 +1,6 @@
 html
     font-family: 'Montserrat', sans-serif
 
-.container
-    padding-left: 405px
-    padding-right: 405px
-
 .dropdown 
     display: inline-block
 
@@ -17,8 +13,6 @@ html
     background-color: #f9f9f9
     min-width: 232px
     z-index: 1
-    left: 794px
-    top: 64px
     &::before
        height: 14px
        position: absolute
@@ -37,60 +31,87 @@ html
     border-bottom: 1px solid #e5e5e5
     transition: 0.3s
 
-.dropdown-content>a
-    &:hover 
+.dropdown-content>a:nth-child(2)
+    padding: 21px 14px
+
+.dropdown-content>a:hover 
         color: #2553DE
 
 .dropdown
     &:hover
         .dropdown-content 
             display: block
+        .header
+            &_menu
+                &_link:hover
+                    border-bottom: none
+                    cursor: pointer
 
 .header
-    height: 1080px
+    height: 200vh
     background: url(../img/header_bg.jpg) center center/cover no-repeat 
-    &_link
-        text-decoration: none
     &_logo
         display: flex
-        justify-content: space-between
+        justify-content: flex-start
         align-items: center
         font-weight: 600
         font-size: 18px
         color: #FBFBFB
-        padding-right: 143px
         overflow: hidden
         text-decoration: none
-        &_text
-            margin-left: 8px
+        padding-top: 24px
     &_menu
         display: flex
-        justify-content: space-between
+        justify-content: center
         align-items: center
-        list-style-type: none
-        margin: 0
-        padding: 22px 0 0 0
+        padding-top: 24px
         &_link
             text-decoration: none
             font-weight: 500
             font-size: 14px
             color: #FBFBFB
             transition: 0.3s
-        &_item:hover
+            //transition: border-width 3s linear
+        &_link:hover
+            text-decoration: none
             border-bottom: 1px solid #FFFFFF
+            color: #FBFBFB
+        &_item
+            margin-right: 30px
+    &_menu>ul 
+        list-style-type: none
+        display: flex
+        flex-direction: row
+        margin: 0
+        padding: 0
     &_info
-        padding-left: 187px 
+        padding-top: 24px
+        display: flex
+        flex-direction: column
+        align-items: flex-end
         &_email
             padding-top: 12px
+            font-weight: 500
+            font-size: 12px
+        &_phone
+            font-weight: 500
+            font-size: 12px
+        &_phone>a, &_email>a
+            display: flex
+            justify-content: center
+            align-items: center
+            color: #fbfbfb
+        &_phone>a:hover, &_email>a:hover
+            text-decoration: none
+            color: #FBFBFB
         &_img
             padding-right: 6px
-    &_info>a 
-        font-weight: 500
-        font-size: 12px
-        color: #fbfbfb
-        text-decoration: none
+    &_info>div
+        display: flex
+        align-items: flex-start
+        flex-direction: column
     &_promotext
-        padding-top: 425px
+        padding-top: 415px
         font-size: 28px
         line-height: 34px
         font-weight: 700
@@ -111,522 +132,530 @@ html
         outline: none
         transition: 0.3s
     &_promobtn:hover
-        box-shadow: 0 0 10px rgba(0,0,0,0.5)
+        background: #103AB7
 
-.services
-    .container:last-child
-        padding-bottom: 60px
-    min-width: 470px
-    background: #ffffff
-    &_header
-        padding: 60px 0 8px 0
-        font-weight: 600
-        font-size: 28px
-        color: #000000
-        cursor: default
-    &_box1, &_box2
-        display: flex
-        justify-content: space-between
-        align-items: center
-        padding-top: 30px
-    &_items
-        display: flex
-        justify-content: center
-        align-items: center
-        width: 350px
-        height: 124px
-        background: #F5F5F5
-        border: 1px solid #DCDCDC
-        box-sizing: border-box
-        border-radius: 3px
-        &_img
-            padding-right: 16px
-    a 
-        font-weight: 500
-        font-size: 18px
-        color: #000000
-        text-decoration: none
-        transition: 0.3s
-    a:hover
-        border-radius: 3px
-        box-shadow: 0 0 3px rgba(0,0,0,0.3)
+// .services
+//     .container:last-child
+//         padding-bottom: 60px
+//     min-width: 470px
+//     background: #ffffff
+//     &_header
+//         padding: 60px 0 8px 0
+//         font-weight: 600
+//         font-size: 28px
+//         color: #000000
+//         cursor: default
+//     &_box1, &_box2
+//         display: flex
+//         justify-content: space-between
+//         align-items: center
+//         padding-top: 30px
+//     &_items
+//         display: flex
+//         justify-content: center
+//         align-items: center
+//         width: 350px
+//         height: 124px
+//         background: #F5F5F5
+//         border: 1px solid #DCDCDC
+//         box-sizing: border-box
+//         border-radius: 3px
+//         &_img
+//             padding-right: 16px
+//     a 
+//         font-weight: 500
+//         font-size: 18px
+//         color: #000000
+//         text-decoration: none
+//         transition: 0.3s
+//     a:hover
+//         border-radius: 3px
+//         box-shadow: 0 0 3px rgba(0,0,0,0.3)
 
-.consultation
-    display: flex
-    justify-content: center
-    align-items: center
-    height: 140px
-    background: #2553DE
-    &_text
-        padding: 0 44px 0 34px
-        font-weight: 500
-        font-size: 20px
-        color: #FFFFFF
-        cursor: default
-    &_btn
-        width: 255px
-        height: 52px
-        background: #2553DE
-        cursor: pointer
-        border: 2px solid #FFFFFF
-        box-sizing: border-box
-        border-radius: 3px
-        font-weight: 600
-        font-size: 16px
-        color: #FFFFFF
-        outline: none
-        transition: 0.3s
-    &_btn:hover
-        box-shadow: 0 0 5px rgba(0,0,0,0.5)
+// .consultation
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     height: 140px
+//     background: #2553DE
+//     &_text
+//         padding: 0 44px 0 34px
+//         font-weight: 500
+//         font-size: 20px
+//         color: #FFFFFF
+//         cursor: default
+//     &_btn
+//         width: 255px
+//         height: 52px
+//         background: #2553DE
+//         cursor: pointer
+//         border: 2px solid #FFFFFF
+//         box-sizing: border-box
+//         border-radius: 3px
+//         font-weight: 600
+//         font-size: 16px
+//         color: #FFFFFF
+//         outline: none
+//         transition: 0.3s
+//     &_btn:hover
+//         box-shadow: 0 0 5px rgba(0,0,0,0.5)
 
-.footer
-    background: #EAEAEA
-    &_container
-        display: flex
-        justify-content: center
-        align-items: flex-start
-        padding: 26px 0 0 0
-        a
-            font-weight: 500
-            font-size: 12px
-            line-height: 15px
-            color: #555555
-            text-decoration: none
-        &_items
-            &_header
-                font-size: 12px
-                font-weight: 700
-                color: #1E1E1E
-                margin-bottom: 12px
-                cursor: default
-            &_logo, &_phone, &_email
-                margin-bottom: 12px
-                display: flex
-                justify-content: start
-                align-items: center
-                &_img
-                    padding-right: 8px
-            &_text
-                margin-bottom: 12px
-    &_icons
-        padding-top: 24px
-        display: flex
-        justify-content: center
-        align-items: center
-    &_icons>a
-        padding-right: 10px
-    &_text
-        font-weight: 500
-        font-size: 10px
-        color: #555555
-        text-align: center
-        padding: 16px 0 16px 0
-        cursor: default
+// .footer
+//     background: #EAEAEA
+//     &_container
+//         display: flex
+//         justify-content: center
+//         align-items: flex-start
+//         padding: 26px 0 0 0
+//         a
+//             font-weight: 500
+//             font-size: 12px
+//             line-height: 15px
+//             color: #555555
+//             text-decoration: none
+//         &_items
+//             &_header
+//                 font-size: 12px
+//                 font-weight: 700
+//                 color: #1E1E1E
+//                 margin-bottom: 12px
+//                 cursor: default
+//             &_logo, &_phone, &_email
+//                 margin-bottom: 12px
+//                 display: flex
+//                 justify-content: start
+//                 align-items: center
+//                 &_img
+//                     padding-right: 8px
+//             &_text
+//                 margin-bottom: 12px
+//     &_icons
+//         padding-top: 24px
+//         display: flex
+//         justify-content: center
+//         align-items: center
+//     &_icons>a
+//         padding-right: 10px
+//     &_text
+//         font-weight: 500
+//         font-size: 10px
+//         color: #555555
+//         text-align: center
+//         padding: 16px 0 16px 0
+//         cursor: default
 
-.footer_container>div:nth-child(1)
-    padding-right: 110px
+// .footer_container>div:nth-child(1)
+//     padding-right: 110px
 
-.footer_container>div:nth-child(2)
-    padding-right: 110px
+// .footer_container>div:nth-child(2)
+//     padding-right: 110px
     
-.modal 
-    display: none
-    position: fixed
-    z-index: 1
-    padding-top: 100px
-    left: 0
-    top: 0
-    width: 100%
-    height: 100%
-    overflow: auto
-    background-color: rgb(0,0,0)
-    background-color: rgba(0,0,0,0.4)
+// .modal 
+//     display: none
+//     position: fixed
+//     z-index: 1
+//     padding-top: 100px
+//     left: 0
+//     top: 0
+//     width: 100%
+//     height: 100%
+//     overflow: auto
+//     background-color: rgb(0,0,0)
+//     background-color: rgba(0,0,0,0.4)
 
-.modal-content 
-    background: #EDEDED
-    margin: auto
-    padding: 30px
-    width: 720px
-    height: 600px
-    &_header
-        font-weight: 600
-        font-size: 30px
-        color: #000000
-        text-align: center
-        padding: 35px 28px 0 28px
-        margin: 0
-    &_text
-        margin: 0
-        font-weight: 500
-        font-size: 14px
-        line-height: 17px
-        color: #A2A2A2
-        text-align: center
-        padding-top: 20px
+// .modal-content 
+//     background: #EDEDED
+//     margin: auto
+//     padding: 30px
+//     width: 720px
+//     height: 600px
+//     &_header
+//         font-weight: 600
+//         font-size: 30px
+//         color: #000000
+//         text-align: center
+//         padding: 35px 28px 0 28px
+//         margin: 0
+//     &_text
+//         margin: 0
+//         font-weight: 500
+//         font-size: 14px
+//         line-height: 17px
+//         color: #A2A2A2
+//         text-align: center
+//         padding-top: 20px
 
-.close 
-    width: 20px
-    height: 20px
-    float: right
-    background: url(../icons/modal/cancel.svg) center center/cover no-repeat 
+// .close 
+//     width: 20px
+//     height: 20px
+//     float: right
+//     background: url(../icons/modal/cancel.svg) center center/cover no-repeat 
 
-.close:hover, .close:focus 
-    background: url(../icons/modal/cancel.png) center center/cover no-repeat 
-    cursor: pointer
+// .close:hover, .close:focus 
+//     background: url(../icons/modal/cancel.png) center center/cover no-repeat 
+//     cursor: pointer
 
 
-input[type=text] 
-    width: 350px
-    height: 40px
-    padding: 11px 18px
-    margin: 20px auto 0 
-    border: 1px solid #DCDCDC
-    box-sizing: border-box
-    border-radius: 3px
-    background-color: #F5F5F5
-    color: black
-    display: block
+// input[type=text] 
+//     width: 350px
+//     height: 40px
+//     padding: 11px 18px
+//     margin: 20px auto 0 
+//     border: 1px solid #DCDCDC
+//     box-sizing: border-box
+//     border-radius: 3px
+//     background-color: #F5F5F5
+//     color: black
+//     display: block
 
-textarea 
-    display: block
-    margin: 20px auto 0 
-    width: 350px
-    height: 120px
-    padding: 12px 20px
-    border: 1px solid #DCDCDC
-    box-sizing: border-box
-    border-radius: 3px
-    background-color: #F5F5F5
-    font-size: 16px
-    resize: none
+// textarea 
+//     display: block
+//     margin: 20px auto 0 
+//     width: 350px
+//     height: 120px
+//     padding: 12px 20px
+//     border: 1px solid #DCDCDC
+//     box-sizing: border-box
+//     border-radius: 3px
+//     background-color: #F5F5F5
+//     font-size: 16px
+//     resize: none
 
-input[type=button]
-    display: block
-    margin: 30px auto 0
-    width: 350px
-    height: 40px
-    background: #2553DE
-    border-radius: 3px
-    outline: none
-    border: none
-    font-weight: 500
-    font-size: 14px
-    color: #FFFFFF
-    transition: 0.3s
-    &:hover
-        box-shadow: 0 0 5px rgba(0,0,0,0.5)
+// input[type=button]
+//     display: block
+//     margin: 30px auto 0
+//     width: 350px
+//     height: 40px
+//     background: #2553DE
+//     border-radius: 3px
+//     outline: none
+//     border: none
+//     font-weight: 500
+//     font-size: 14px
+//     color: #FFFFFF
+//     transition: 0.3s
+//     &:hover
+//         box-shadow: 0 0 5px rgba(0,0,0,0.5)
 
-@media (min-width: 1200px) and (max-width:1820px)
-    .container 
-        padding-left: 100px
-        padding-right: 100px
-    .services
-        &_items
-            width: 300px
-    .header
-        &_info
-            padding-left: 50px
-        &_logo
-            padding-right: 60px
-        &_menu
-            &_item
-                margin-right: 10px
-            &_link
-                font-size: 16px
-    .dropdown-content
-        left: 33%
+
+
+
+
+
+
+
+
+// @media (min-width: 1200px) and (max-width:1820px)
+//     .container 
+//         padding-left: 100px
+//         padding-right: 100px
+//     .services
+//         &_items
+//             width: 300px
+//     .header
+//         &_info
+//             padding-left: 50px
+//         &_logo
+//             padding-right: 60px
+//         &_menu
+//             &_item
+//                 margin-right: 10px
+//             &_link
+//                 font-size: 16px
+//     .dropdown-content
+//         left: 33%
     
  
-@media (min-width: 991px) and (max-width:1199px)
-    .container 
-        padding-left: 70px
-        padding-right: 70px
-    .services
-        &_items
-            width: 250px
-    .services a 
-        font-size: 15px
-    .header
-        &_info
-            padding-left: 30px
-        &_logo
-            padding-right: 40px
-        &_menu
-            &_item
-                margin-right: 10px
-            &_link
-                font-size: 16px
-    .dropdown-content
-        left: 33%
+// @media (min-width: 991px) and (max-width:1199px)
+//     .container 
+//         padding-left: 70px
+//         padding-right: 70px
+//     .services
+//         &_items
+//             width: 250px
+//     .services a 
+//         font-size: 15px
+//     .header
+//         &_info
+//             padding-left: 30px
+//         &_logo
+//             padding-right: 40px
+//         &_menu
+//             &_item
+//                 margin-right: 10px
+//             &_link
+//                 font-size: 16px
+//     .dropdown-content
+//         left: 33%
 
-@media (min-width: 767px) and (max-width:990px)
-    .modal-content
-        width: 500px
-    .container 
-        padding-left: 20px
-        padding-right: 20px
-    .header
-        &_info
-            padding-left: 10px
-        &_logo
-            padding-right: 20px
-        &_promotext
-            font-size: 23px
-        &_promobtn
-            min-width: 270px
-            height: 60px
-            font-size: 17px
-    .services
-        &_header
-            font-size: 23px
-            padding: 30px 0 0 0
-        &_box1, &_box2
-            display: flex
-            flex-direction: column
-            padding: 0
-        &_items
-            margin-top: 30px
-    .consultation
-        &_text
-            font-size: 15px
-            padding: 0 24px 0 24px
-    .footer_container>div:nth-child(1)
-        padding-right: 70px
-    .footer_container>div:nth-child(2)
-        padding-right: 70px
-    .dropdown-content
-        left: 33%
-@media (min-width: 600px) and (max-width:766px)
-    .modal-content
-        width: 450px
-    .container 
-        padding-left: 10px
-        padding-right: 10px
-    .header
-        &_info
-            padding-left: 5px
-        &_logo
-            padding-right: 5px
-            font-size: 12px
-            &_text
-                width: 70px
-        &_menu
-            &_link
-                font-size: 12px
-        &_info>a 
-            font-size: 10px
-        &_promotext
-            font-size: 25px
-    .dropdown-content
-        left: 26%
-    .consultation
-        &_text
-            font-size: 15px
-            padding: 0 14px 0 14px
-        &_btn
-            width: 225px
-            height: 45px
-            font-size: 13px
-    .footer_container>div:nth-child(1)
-        padding-right: 50px
-    .footer_container>div:nth-child(2)
-        padding-right: 50px
-    .services
-        .container:last-child
-            padding-bottom: 30px
-        &_header
-            font-size: 23px
-            padding: 30px 0 0 0
-        &_box1, &_box2
-            display: flex
-            flex-direction: column
-            padding: 0
-        &_items
-            margin-top: 30px
-@media (min-width: 480px) and (max-width:599px)
-    .modal-content
-        width: 300px
-        &_header
-            font-size: 25px
-    input[type=text], input[type=button], textarea
-        width: 250px
-    .container 
-        padding-left: 10px
-        padding-right: 10px
-    .services
-        .container:last-child
-            padding-bottom: 30px
-        &_header
-            font-size: 23px
-            padding: 30px 0 0 0
-        &_box1, &_box2
-            display: flex
-            flex-direction: column
-            padding: 0
-        &_items
-            margin-top: 30px
-    .footer_container>div:nth-child(1)
-        padding-right: 30px
-    .footer_container>div:nth-child(2)
-        padding-right: 30px
-    .footer
-        &_container
-            a 
-                font-size: 10px
-        &_text
-            font-size: 12px
-    .header
-        &_info
-            padding-left: 5px
-        &_logo
-            padding-right: 5px
-            font-size: 12px
-            &_text
-                width: 70px
-        &_menu
-            &_link
-                font-size: 12px
-        &_info
-            display: none
-        &_promotext
-            font-size: 25px
-    .dropdown-content
-        left: 34%
-    .consultation
-        &_text
-            font-size: 13px
-            padding: 0 14px 0 14px
-            width: 170px
-        &_btn
-            width: 180px
-            height: 45px
-            font-size: 12px
-@media (min-width: 320px) and (max-width:479px)
-    .modal-content
-        width: 250px
-        padding: 10px
-        height: 420px
-        &_header
-            font-size: 18px
-            padding: 15px 28px 0 28px
-        &_text
-            font-size: 11px
-            padding-top: 10px
-    input[type=text], input[type=button], textarea
-        width: 230px
-        margin: 10px auto 0
-    textarea
-        height: 80px
-    .container 
-        padding-left: 10px
-        padding-right: 10px
-    .services
-        min-width: 320px
-        .container:last-child
-            padding-bottom: 30px
-        &_header
-            font-size: 23px
-            padding: 30px 0 0 0
-        &_box1, &_box2
-            display: flex
-            flex-direction: column
-            align-items: center
-            padding: 0
-        &_items
-            margin-top: 30px
-            width: 200px
-            height: 85px
-        a 
-            font-size: 9px
-        &_header
-            font-size: 18px
-    .header
-        height: 700px
-        &_info
-            display: none
-        &_logo
-            padding-right: 5px
-            font-size: 16px
-            &_text
-                width: 90px
-        &_menu
-            position: fixed
-            flex-direction: column
-            justify-content: center
-            align-items: flex-start
-            top: 0
-            left: -100%
-            width: 50%
-            height: 100vh
-            padding: 20px 20px
-            background-color: rgba(0,0,0, .8)
-            transition: 0.6s all
-            &_active 
-                left: 0
-            &_item 
-                padding-right: 0
-                border: none
-                margin: 10px 0
-            &_link
-                font-size: 14px
-        &_promotext
-            font-size: 20px
-            padding-top: 150px
-    .hamburger
-        display: block
-        position: absolute
-        right: 10px
-        top: 3%
-        width: 26px
-        height: 12px
-        span 
-            display: block 
-            height: 2px
-            width: 100%
-            background-color: #fff 
-            margin-bottom: 2px
-            transition: 0.5s all
-        &_active 
-            span 
-                margin-bottom: -2px 
-                &:nth-child(1)
-                    transform: translateY(3px) rotate(-45deg)
-                &:nth-child(2)
-                    display: none
-                &:nth-child(3)
-                    transform: translateY(3px) rotate(45deg)
-    .xs-hidden
-        display: none
-    .xs-visible 
-        display: block
-    .consultation
-        &_img
-            display: none
-        &_text
-            font-size: 12px
-            padding: 0 14px 0 14px
-            width: 140px
-        &_btn
-            width: 180px
-            height: 45px
-            font-size: 11px
-            margin-right: 5px
-    .footer_container>div:nth-child(1)
-        padding-right: 20px
-    .footer_container>div:nth-child(2)
-        padding-right: 20px
-    .footer
-        &_container
-            display: flex
-            flex-direction: column
-            padding: 26px 0 0 26px
-            a 
-                font-size: 14px
-            &_items
-                padding-bottom: 26px
-        &_text
-            font-size: 16px
-        &_icons
-            padding-top: 0
-    .dropdown-content
-        display: none
+// @media (min-width: 767px) and (max-width:990px)
+//     .modal-content
+//         width: 500px
+//     .container 
+//         padding-left: 20px
+//         padding-right: 20px
+//     .header
+//         &_info
+//             padding-left: 10px
+//         &_logo
+//             padding-right: 20px
+//         &_promotext
+//             font-size: 23px
+//         &_promobtn
+//             min-width: 270px
+//             height: 60px
+//             font-size: 17px
+//     .services
+//         &_header
+//             font-size: 23px
+//             padding: 30px 0 0 0
+//         &_box1, &_box2
+//             display: flex
+//             flex-direction: column
+//             padding: 0
+//         &_items
+//             margin-top: 30px
+//     .consultation
+//         &_text
+//             font-size: 15px
+//             padding: 0 24px 0 24px
+//     .footer_container>div:nth-child(1)
+//         padding-right: 70px
+//     .footer_container>div:nth-child(2)
+//         padding-right: 70px
+//     .dropdown-content
+//         left: 33%
+// @media (min-width: 600px) and (max-width:766px)
+//     .modal-content
+//         width: 450px
+//     .container 
+//         padding-left: 10px
+//         padding-right: 10px
+//     .header
+//         &_info
+//             padding-left: 5px
+//         &_logo
+//             padding-right: 5px
+//             font-size: 12px
+//             &_text
+//                 width: 70px
+//         &_menu
+//             &_link
+//                 font-size: 12px
+//         &_info>a 
+//             font-size: 10px
+//         &_promotext
+//             font-size: 25px
+//     .dropdown-content
+//         left: 26%
+//     .consultation
+//         &_text
+//             font-size: 15px
+//             padding: 0 14px 0 14px
+//         &_btn
+//             width: 225px
+//             height: 45px
+//             font-size: 13px
+//     .footer_container>div:nth-child(1)
+//         padding-right: 50px
+//     .footer_container>div:nth-child(2)
+//         padding-right: 50px
+//     .services
+//         .container:last-child
+//             padding-bottom: 30px
+//         &_header
+//             font-size: 23px
+//             padding: 30px 0 0 0
+//         &_box1, &_box2
+//             display: flex
+//             flex-direction: column
+//             padding: 0
+//         &_items
+//             margin-top: 30px
+// @media (min-width: 480px) and (max-width:599px)
+//     .modal-content
+//         width: 300px
+//         &_header
+//             font-size: 25px
+//     input[type=text], input[type=button], textarea
+//         width: 250px
+//     .container 
+//         padding-left: 10px
+//         padding-right: 10px
+//     .services
+//         .container:last-child
+//             padding-bottom: 30px
+//         &_header
+//             font-size: 23px
+//             padding: 30px 0 0 0
+//         &_box1, &_box2
+//             display: flex
+//             flex-direction: column
+//             padding: 0
+//         &_items
+//             margin-top: 30px
+//     .footer_container>div:nth-child(1)
+//         padding-right: 30px
+//     .footer_container>div:nth-child(2)
+//         padding-right: 30px
+//     .footer
+//         &_container
+//             a 
+//                 font-size: 10px
+//         &_text
+//             font-size: 12px
+//     .header
+//         &_info
+//             padding-left: 5px
+//         &_logo
+//             padding-right: 5px
+//             font-size: 12px
+//             &_text
+//                 width: 70px
+//         &_menu
+//             &_link
+//                 font-size: 12px
+//         &_info
+//             display: none
+//         &_promotext
+//             font-size: 25px
+//     .dropdown-content
+//         left: 34%
+//     .consultation
+//         &_text
+//             font-size: 13px
+//             padding: 0 14px 0 14px
+//             width: 170px
+//         &_btn
+//             width: 180px
+//             height: 45px
+//             font-size: 12px
+// @media (min-width: 320px) and (max-width:479px)
+//     .modal-content
+//         width: 250px
+//         padding: 10px
+//         height: 420px
+//         &_header
+//             font-size: 18px
+//             padding: 15px 28px 0 28px
+//         &_text
+//             font-size: 11px
+//             padding-top: 10px
+//     input[type=text], input[type=button], textarea
+//         width: 230px
+//         margin: 10px auto 0
+//     textarea
+//         height: 80px
+//     .container 
+//         padding-left: 10px
+//         padding-right: 10px
+//     .services
+//         min-width: 320px
+//         .container:last-child
+//             padding-bottom: 30px
+//         &_header
+//             font-size: 23px
+//             padding: 30px 0 0 0
+//         &_box1, &_box2
+//             display: flex
+//             flex-direction: column
+//             align-items: center
+//             padding: 0
+//         &_items
+//             margin-top: 30px
+//             width: 200px
+//             height: 85px
+//         a 
+//             font-size: 9px
+//         &_header
+//             font-size: 18px
+//     .header
+//         height: 700px
+//         &_info
+//             display: none
+//         &_logo
+//             padding-right: 5px
+//             font-size: 16px
+//             &_text
+//                 width: 90px
+//         &_menu
+//             position: fixed
+//             flex-direction: column
+//             justify-content: center
+//             align-items: flex-start
+//             top: 0
+//             left: -100%
+//             width: 50%
+//             height: 100vh
+//             padding: 20px 20px
+//             background-color: rgba(0,0,0, .8)
+//             transition: 0.6s all
+//             &_active 
+//                 left: 0
+//             &_item 
+//                 padding-right: 0
+//                 border: none
+//                 margin: 10px 0
+//             &_link
+//                 font-size: 14px
+//         &_promotext
+//             font-size: 20px
+//             padding-top: 150px
+//     .hamburger
+//         display: block
+//         position: absolute
+//         right: 10px
+//         top: 3%
+//         width: 26px
+//         height: 12px
+//         span 
+//             display: block 
+//             height: 2px
+//             width: 100%
+//             background-color: #fff 
+//             margin-bottom: 2px
+//             transition: 0.5s all
+//         &_active 
+//             span 
+//                 margin-bottom: -2px 
+//                 &:nth-child(1)
+//                     transform: translateY(3px) rotate(-45deg)
+//                 &:nth-child(2)
+//                     display: none
+//                 &:nth-child(3)
+//                     transform: translateY(3px) rotate(45deg)
+//     .xs-hidden
+//         display: none
+//     .xs-visible 
+//         display: block
+//     .consultation
+//         &_img
+//             display: none
+//         &_text
+//             font-size: 12px
+//             padding: 0 14px 0 14px
+//             width: 140px
+//         &_btn
+//             width: 180px
+//             height: 45px
+//             font-size: 11px
+//             margin-right: 5px
+//     .footer_container>div:nth-child(1)
+//         padding-right: 20px
+//     .footer_container>div:nth-child(2)
+//         padding-right: 20px
+//     .footer
+//         &_container
+//             display: flex
+//             flex-direction: column
+//             padding: 26px 0 0 26px
+//             a 
+//                 font-size: 14px
+//             &_items
+//                 padding-bottom: 26px
+//         &_text
+//             font-size: 16px
+//         &_icons
+//             padding-top: 0
+//     .dropdown-content
+//         display: none
