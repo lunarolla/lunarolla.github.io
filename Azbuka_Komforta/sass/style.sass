@@ -504,10 +504,14 @@ input[type=button]
 @media (min-width: 320px) and (max-width:479px)
     .modal-content
         width: 250px
+        padding: 20px
+        height: 570px
         &_header
             font-size: 20px
     input[type=text], input[type=button], textarea
         width: 230px
+    input[type=button]
+        margin: 20px auto 0
     .container 
         padding-left: 10px
         padding-right: 10px
@@ -526,6 +530,7 @@ input[type=button]
         &_items
             margin-top: 30px
             width: 200px
+            height: 85px
         a 
             font-size: 9px
         &_header
@@ -576,6 +581,8 @@ input[type=button]
             background-color: #fff 
             margin-bottom: 2px
             transition: 0.5s all
+            border-radius: 30px
+            margin-top: 3px
         &_active 
             span 
                 margin-bottom: -2px 
@@ -619,4 +626,4 @@ input[type=button]
         &_icons
             padding-top: 0
     .dropdown-content
-        left: 37%
+        display: block
