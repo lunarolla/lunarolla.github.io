@@ -121,6 +121,8 @@ html
         font-size: 28px
         color: #000000
         cursor: default
+        &_1
+            display: none
     &_box1, &_box2
         display: flex
         justify-content: space-between
@@ -262,14 +264,13 @@ html
         padding-top: 20px
 
 .close 
-    color: #aaaaaa
+    width: 20px
+    height: 20px
     float: right
-    font-size: 28px
-    font-weight: bold
+    background: url(../icons/modal/cancel.svg) center center/cover no-repeat 
 
 .close:hover, .close:focus 
-    color: #000
-    text-decoration: none
+    background: url(../icons/modal/cancel.png) center center/cover no-repeat 
     cursor: pointer
 
 
@@ -314,7 +315,7 @@ input[type=button]
     &:hover
         box-shadow: 0 0 5px rgba(0,0,0,0.5)
 
-@media (min-width: 1200px)
+@media (min-width: 1200px) and (max-width:1820px)
     .container 
         padding-left: 100px
         padding-right: 100px
@@ -331,8 +332,230 @@ input[type=button]
                 margin-right: 10px
             &_link
                 font-size: 16px
-    .dropdown-content 
-        left: 414px
-        top: 64px
+    .dropdown-content
+        left: 33%
+    
+ 
+@media (min-width: 991px) and (max-width:1199px)
+    .container 
+        padding-left: 70px
+        padding-right: 70px
+    .services
+        &_items
+            width: 250px
+    .services a 
+        font-size: 15px
+    .header
+        &_info
+            padding-left: 30px
+        &_logo
+            padding-right: 40px
+        &_menu
+            &_item
+                margin-right: 10px
+            &_link
+                font-size: 16px
+    .dropdown-content
+        left: 33%
 
-@media (min-width: 991px)
+@media (min-width: 767px) and (max-width:990px)
+    .container 
+        padding-left: 20px
+        padding-right: 20px
+    .header
+        &_info
+            padding-left: 10px
+        &_logo
+            padding-right: 20px
+        &_promotext
+            font-size: 23px
+        &_promobtn
+            min-width: 270px
+            height: 60px
+            font-size: 17px
+    .services
+        &_header
+            font-size: 23px
+            padding: 30px 0 0 0
+        &_box1, &_box2
+            display: flex
+            flex-direction: column
+            padding: 0
+        &_items
+            margin-top: 30px
+    .consultation
+        &_text
+            font-size: 15px
+            padding: 0 24px 0 24px
+    .footer_container>div:nth-child(1)
+        padding-right: 70px
+    .footer_container>div:nth-child(2)
+        padding-right: 70px
+    .dropdown-content
+        left: 33%
+
+@media (min-width: 600px) and (max-width:766px)
+    .container 
+        padding-left: 10px
+        padding-right: 10px
+    .header
+        &_info
+            padding-left: 5px
+        &_logo
+            padding-right: 5px
+            font-size: 12px
+            &_text
+                width: 70px
+        &_menu
+            &_link
+                font-size: 12px
+        &_info>a 
+            font-size: 10px
+        &_promotext
+            font-size: 25px
+    .dropdown-content
+        left: 26%
+    .consultation
+        &_text
+            font-size: 15px
+            padding: 0 14px 0 14px
+        &_btn
+            width: 225px
+            height: 45px
+            font-size: 13px
+    .footer_container>div:nth-child(1)
+        padding-right: 50px
+    .footer_container>div:nth-child(2)
+        padding-right: 50px
+    .services
+        .container:last-child
+            padding-bottom: 30px
+        &_header
+            font-size: 23px
+            padding: 30px 0 0 0
+        &_box1, &_box2
+            display: flex
+            flex-direction: column
+            padding: 0
+        &_items
+            margin-top: 30px
+@media (min-width: 480px) and (max-width:599px)
+    .container 
+        padding-left: 10px
+        padding-right: 10px
+    .services
+        .container:last-child
+            padding-bottom: 30px
+        &_header
+            font-size: 23px
+            padding: 30px 0 0 0
+        &_box1, &_box2
+            display: flex
+            flex-direction: column
+            padding: 0
+        &_items
+            margin-top: 30px
+    .footer_container>div:nth-child(1)
+        padding-right: 30px
+    .footer_container>div:nth-child(2)
+        padding-right: 30px
+    .footer
+        &_container
+            a 
+                font-size: 10px
+        &_text
+            font-size: 12px
+    .header
+        &_info
+            padding-left: 5px
+        &_logo
+            padding-right: 5px
+            font-size: 12px
+            &_text
+                width: 70px
+        &_menu
+            &_link
+                font-size: 12px
+        &_info
+            display: none
+        &_promotext
+            font-size: 25px
+    .dropdown-content
+        left: 34%
+    .consultation
+        &_text
+            font-size: 13px
+            padding: 0 14px 0 14px
+            width: 170px
+        &_btn
+            width: 180px
+            height: 45px
+            font-size: 12px
+@media (min-width: 320px) and (max-width:479px)
+    .container 
+        padding-left: 10px
+        padding-right: 10px
+    .services
+        .container:last-child
+            padding-bottom: 30px
+        &_header
+            font-size: 23px
+            padding: 30px 0 0 0
+        &_box1, &_box2
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            padding: 0
+        &_items
+            margin-top: 30px
+            width: 200px
+        a 
+            font-size: 9px
+        &_header
+            display: none
+            &_1
+                display: block
+                font-size: 12px
+    .header
+        &_info
+            padding-left: 5px
+        &_logo
+            padding-right: 5px
+            font-size: 10px
+            &_text
+                width: 55px
+        &_menu
+            &_link
+                font-size: 10px
+        &_info
+            display: none
+        &_promotext
+            font-size: 25px
+    .consultation
+        &_img
+            display: none
+        &_text
+            font-size: 12px
+            padding: 0 14px 0 14px
+            width: 140px
+        &_btn
+            width: 180px
+            height: 45px
+            font-size: 11px
+            margin-right: 5px
+    .footer_container>div:nth-child(1)
+        padding-right: 20px
+    .footer_container>div:nth-child(2)
+        padding-right: 20px
+    .footer
+        &_container
+            display: flex
+            flex-direction: column
+            padding: 26px 0 0 26px
+            a 
+                font-size: 14px
+        &_text
+            font-size: 16px
+    
+
+    
