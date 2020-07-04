@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -65,7 +67,10 @@
                 <div class="col-10">
                     <div>Создаем оборудование по чертежам заказчика<br>Проектирование аналогов имеющегося оборудования<br>Лучшее качество за разумные деньги!</div> 
                 </div>
-                <div class="col-3"><button id="btn_form_1" class="header_promobtn">Получить консультацию</button> </div>
+                <div id="inline-popups" class="col-3">
+                    <a href="#test-popup" data-effect="mfp-zoom-in" class="header_promobtn">Получить консультацию</a>
+                </div>
+                <!-- <div class="col-3"><button id="btn_form_1" class="header_promobtn">Получить консультацию</button> </div> -->
             </div>
         </div>
     </header>
@@ -123,8 +128,10 @@
                 <div class="col-4 consultation_text">
                     <div>Хотите получить консультацию у нашего специалиста?</div>
                 </div>
-                <div class="col-3 consultation_box">
-                    <button id="btn_form_2" class="consultation_btn">Получить консультацию</button>
+                <div class="col-3">
+                    <div id="inline-popups" class="consultation_box_btn">
+                        <a href="#test-popup" data-effect="mfp-zoom-in" class="consultation_box">Получить консультацию</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -197,11 +204,11 @@
         </div>
     </footer>
 
-    <!-- <div id="myModal" class="modal">
-        <div class="modal-content">
+    <div id="test-popup" class="modal white-popup mfp-with-anim mfp-hide">
+        <div class="modal">
             <span class="close"></span>
-            <p class="modal-content_header">Получите бесплатную консультацию:</p>
-            <p class="modal-content_text">Заполните форму и наш сотрудник свяжется с Вами в течении дня.</p>
+            <p class="modal_header">Получите бесплатную консультацию:</p>
+            <p class="modal_text">Заполните форму и наш сотрудник свяжется с Вами в течении дня.</p>
             <form>
                 <div class="form">
                     <input type="text" id="fname" name="fname" placeholder="Имя">
@@ -214,6 +221,20 @@
         </div>
     </div> 
 
-    <script  src="js/script.js"></script> -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script>
+        $('#inline-popups').magnificPopup({
+        delegate: 'a',
+        removalDelay: 500, 
+        callbacks: {
+            beforeOpen: function() {
+            this.st.mainClass = this.st.el.attr('data-effect');
+            }
+        },
+        midClick: true 
+        });
+    </script>
 </body>
 </html>
+
+
