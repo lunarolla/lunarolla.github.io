@@ -1,5 +1,33 @@
+@font-face 
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 400
+    src: url('../fonts/montserrat-v14-cyrillic-regular.eot') 
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat-v14-cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-regular.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-regular.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-regular.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-regular.svg#Montserrat') format('svg')
+
+@font-face 
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 500
+    src: url('../fonts/montserrat-v14-cyrillic-500.eot')
+    src: local('Montserrat Medium'), local('Montserrat-Medium'), url('../fonts/montserrat-v14-cyrillic-500.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-500.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-500.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-500.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-500.svg#Montserrat') format('svg')
+
+@font-face 
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 600
+    src: url('../fonts/montserrat-v14-cyrillic-600.eot')
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url('../fonts/montserrat-v14-cyrillic-600.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-600.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-600.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-600.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-600.svg#Montserrat') format('svg')
+
+@font-face 
+    font-family: 'Montserrat'
+    font-style: normal
+    font-weight: 700
+    src: url('../fonts/montserrat-v14-cyrillic-700.eot')
+    src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/montserrat-v14-cyrillic-700.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-700.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-700.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-700.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-700.svg#Montserrat') format('svg')
+
 html
-    font-family: 'Montserrat', sans-serif
+    font-family: 'Montserrat'
 
 .dropdown 
     display: inline-block
@@ -45,8 +73,9 @@ html
             display: block
 
 .header
-    height: 200vh
+    height: 100vh
     background: url(../img/header_bg.jpg) center center/cover no-repeat 
+    background-size: 100%
     &_logo
         display: flex
         justify-content: flex-start
@@ -111,7 +140,9 @@ html
         align-items: flex-start
         flex-direction: column
     &_promotext
-        padding-top: 415px
+        height: 100vh
+        display: flex
+        align-items: center
         font-size: 28px
         line-height: 34px
         font-weight: 700
@@ -120,7 +151,7 @@ html
         cursor: default
     &_promobtn
         margin-top: 34px
-        min-width: 255px
+        width: 100%
         height: 52px
         background: #2553DE
         border-radius: 3px
@@ -170,9 +201,6 @@ html
     align-items: center
     height: 140px
     background: #2553DE
-    &_img
-        display: flex
-        justify-content: flex-end
     &_text
         display: flex
         align-items: center
@@ -185,7 +213,7 @@ html
         display: flex
         align-items: center
     &_btn
-        width: 255px
+        width: 100%
         height: 52px
         background: #2553DE
         cursor: pointer
