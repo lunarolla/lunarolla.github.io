@@ -74,14 +74,10 @@
 .header
 	height: 100vh
 	background: url(../img/header_bg.jpg) center center/cover no-repeat 
-	background-size: 100%
 	&_logo
 		display: flex
 		justify-content: flex-start
 		align-items: center
-		font-weight: 600
-		font-size: 18px
-		color: #FBFBFB
 		overflow: hidden
 		text-decoration: none
 		padding-top: 24px
@@ -172,8 +168,12 @@
 	&_promobtn:focus
 		outline: none
 
+.logo_1
+	display: none
+
 .services
-	height: 470px
+	padding: 60px 0 60px 0
+	height: 100%
 	display: flex
 	align-items: center
 	&_header
@@ -384,3 +384,25 @@ input[type=button]
 		font-size: 14px
 		line-height: 17px
 		color: #A2A2A2
+
+@media ( max-width: 1200px)
+	.consultation
+		.row
+			justify-content: center
+	
+
+@media ( max-width: 990px)
+	.logo_1
+		display: inline
+	.logo
+		display: none
+	.header
+		&_menu
+			&_item
+				margin-right: 10px
+	.footer
+		&_items
+			align-items: center
+
+
+	
