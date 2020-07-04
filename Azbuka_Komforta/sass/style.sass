@@ -13,6 +13,8 @@ html
     background-color: #f9f9f9
     min-width: 232px
     z-index: 1
+    ///!!!!
+    top: 64px
     &::before
        height: 14px
        position: absolute
@@ -41,11 +43,6 @@ html
     &:hover
         .dropdown-content 
             display: block
-        .header
-            &_menu
-                &_link:hover
-                    border-bottom: none
-                    cursor: pointer
 
 .header
     height: 200vh
@@ -65,19 +62,22 @@ html
         justify-content: center
         align-items: center
         padding-top: 24px
-        &_link
+        &_item
+            margin-right: 30px
+        &_item>a
             text-decoration: none
             font-weight: 500
             font-size: 14px
             color: #FBFBFB
-            transition: 0.3s
-            //transition: border-width 3s linear
-        &_link:hover
-            text-decoration: none
-            border-bottom: 1px solid #FFFFFF
-            color: #FBFBFB
-        &_item
-            margin-right: 30px
+        &_item>a::after
+            content: ''
+            display: block
+            width: 0
+            height: 1px
+            background: #ffffff
+            transition: width 0.5s
+        &_item>a:hover::after
+            width: 100%
     &_menu>ul 
         list-style-type: none
         display: flex
@@ -133,123 +133,124 @@ html
         transition: 0.3s
     &_promobtn:hover
         background: #103AB7
+    &_promobtn:focus
+        outline: none
 
-// .services
-//     .container:last-child
-//         padding-bottom: 60px
-//     min-width: 470px
-//     background: #ffffff
-//     &_header
-//         padding: 60px 0 8px 0
-//         font-weight: 600
-//         font-size: 28px
-//         color: #000000
-//         cursor: default
-//     &_box1, &_box2
-//         display: flex
-//         justify-content: space-between
-//         align-items: center
-//         padding-top: 30px
-//     &_items
-//         display: flex
-//         justify-content: center
-//         align-items: center
-//         width: 350px
-//         height: 124px
-//         background: #F5F5F5
-//         border: 1px solid #DCDCDC
-//         box-sizing: border-box
-//         border-radius: 3px
-//         &_img
-//             padding-right: 16px
-//     a 
-//         font-weight: 500
-//         font-size: 18px
-//         color: #000000
-//         text-decoration: none
-//         transition: 0.3s
-//     a:hover
-//         border-radius: 3px
-//         box-shadow: 0 0 3px rgba(0,0,0,0.3)
+.services
+    height: 470px
+    display: flex
+    align-items: center
+    &_header
+        font-weight: 600
+        font-size: 28px
+        color: #000000
+        cursor: default
+    &_items
+        padding-top: 30px
+    &_items>a
+        padding: 10px 10px
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 124px
+        background-color: #F5F5F5
+        border: 1px solid #DCDCDC
+        box-sizing: border-box
+        border-radius: 3px
+        font-weight: 500
+        font-size: 18px
+        color: #000000
+        text-decoration: none
+    &_items>a>img
+            padding-right: 16px
 
-// .consultation
-//     display: flex
-//     justify-content: center
-//     align-items: center
-//     height: 140px
-//     background: #2553DE
-//     &_text
-//         padding: 0 44px 0 34px
-//         font-weight: 500
-//         font-size: 20px
-//         color: #FFFFFF
-//         cursor: default
-//     &_btn
-//         width: 255px
-//         height: 52px
-//         background: #2553DE
-//         cursor: pointer
-//         border: 2px solid #FFFFFF
-//         box-sizing: border-box
-//         border-radius: 3px
-//         font-weight: 600
-//         font-size: 16px
-//         color: #FFFFFF
-//         outline: none
-//         transition: 0.3s
-//     &_btn:hover
-//         box-shadow: 0 0 5px rgba(0,0,0,0.5)
+.consultation
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 140px
+    background: #2553DE
+    &_img
+        display: flex
+        justify-content: flex-end
+    &_text
+        display: flex
+        align-items: center
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+        color: #FFFFFF
+        cursor: default
+    &_box
+        display: flex
+        align-items: center
+    &_btn
+        width: 255px
+        height: 52px
+        background: #2553DE
+        cursor: pointer
+        border: 2px solid #FFFFFF
+        box-sizing: border-box
+        border-radius: 3px
+        font-weight: 600
+        font-size: 16px
+        color: #FFFFFF
+        outline: none
+        transition: 0.3s
+    &_btn:hover
+        background: #FFFFFF
+        border: 2px solid #FFFFFF
+        color: #1E1E1E
+    &_btn:focus
+        outline: none
 
-// .footer
-//     background: #EAEAEA
-//     &_container
-//         display: flex
-//         justify-content: center
-//         align-items: flex-start
-//         padding: 26px 0 0 0
-//         a
-//             font-weight: 500
-//             font-size: 12px
-//             line-height: 15px
-//             color: #555555
-//             text-decoration: none
-//         &_items
-//             &_header
-//                 font-size: 12px
-//                 font-weight: 700
-//                 color: #1E1E1E
-//                 margin-bottom: 12px
-//                 cursor: default
-//             &_logo, &_phone, &_email
-//                 margin-bottom: 12px
-//                 display: flex
-//                 justify-content: start
-//                 align-items: center
-//                 &_img
-//                     padding-right: 8px
-//             &_text
-//                 margin-bottom: 12px
-//     &_icons
-//         padding-top: 24px
-//         display: flex
-//         justify-content: center
-//         align-items: center
-//     &_icons>a
-//         padding-right: 10px
-//     &_text
-//         font-weight: 500
-//         font-size: 10px
-//         color: #555555
-//         text-align: center
-//         padding: 16px 0 16px 0
-//         cursor: default
+.footer
+    background: #EAEAEA
+    padding-top: 26px
+    padding-bottom: 16px
+    &_items
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        align-items: flex-start
+        &_header
+            font-size: 12px
+            font-weight: 700
+            color: #1E1E1E
+            cursor: default
+        &_info
+            display: flex
+            align-items: center
+        &_info>img
+            padding-right: 7px
+    &_items>div
+        display: flex
+        flex-direction: column
+        justify-content: flex-start
+        a
+            padding-top: 12px
+            font-weight: 500
+            font-size: 12px
+            line-height: 15px
+            color: #555555
+            text-decoration: none
+        a:nth-child(1)
+            padding-top: 0
+    &_icons
+        padding-top: 24px
+        display: flex
+        justify-content: center
+        align-items: center
+    &_icons>a
+        padding-right: 10px
+    &_text
+        font-weight: 500
+        font-size: 10px
+        color: #555555
+        text-align: center
+        padding: 16px 0 16px 0
+        cursor: default
 
-// .footer_container>div:nth-child(1)
-//     padding-right: 110px
-
-// .footer_container>div:nth-child(2)
-//     padding-right: 110px
-    
 // .modal 
 //     display: none
 //     position: fixed
@@ -336,326 +337,3 @@ html
 //     transition: 0.3s
 //     &:hover
 //         box-shadow: 0 0 5px rgba(0,0,0,0.5)
-
-
-
-
-
-
-
-
-
-// @media (min-width: 1200px) and (max-width:1820px)
-//     .container 
-//         padding-left: 100px
-//         padding-right: 100px
-//     .services
-//         &_items
-//             width: 300px
-//     .header
-//         &_info
-//             padding-left: 50px
-//         &_logo
-//             padding-right: 60px
-//         &_menu
-//             &_item
-//                 margin-right: 10px
-//             &_link
-//                 font-size: 16px
-//     .dropdown-content
-//         left: 33%
-    
- 
-// @media (min-width: 991px) and (max-width:1199px)
-//     .container 
-//         padding-left: 70px
-//         padding-right: 70px
-//     .services
-//         &_items
-//             width: 250px
-//     .services a 
-//         font-size: 15px
-//     .header
-//         &_info
-//             padding-left: 30px
-//         &_logo
-//             padding-right: 40px
-//         &_menu
-//             &_item
-//                 margin-right: 10px
-//             &_link
-//                 font-size: 16px
-//     .dropdown-content
-//         left: 33%
-
-// @media (min-width: 767px) and (max-width:990px)
-//     .modal-content
-//         width: 500px
-//     .container 
-//         padding-left: 20px
-//         padding-right: 20px
-//     .header
-//         &_info
-//             padding-left: 10px
-//         &_logo
-//             padding-right: 20px
-//         &_promotext
-//             font-size: 23px
-//         &_promobtn
-//             min-width: 270px
-//             height: 60px
-//             font-size: 17px
-//     .services
-//         &_header
-//             font-size: 23px
-//             padding: 30px 0 0 0
-//         &_box1, &_box2
-//             display: flex
-//             flex-direction: column
-//             padding: 0
-//         &_items
-//             margin-top: 30px
-//     .consultation
-//         &_text
-//             font-size: 15px
-//             padding: 0 24px 0 24px
-//     .footer_container>div:nth-child(1)
-//         padding-right: 70px
-//     .footer_container>div:nth-child(2)
-//         padding-right: 70px
-//     .dropdown-content
-//         left: 33%
-// @media (min-width: 600px) and (max-width:766px)
-//     .modal-content
-//         width: 450px
-//     .container 
-//         padding-left: 10px
-//         padding-right: 10px
-//     .header
-//         &_info
-//             padding-left: 5px
-//         &_logo
-//             padding-right: 5px
-//             font-size: 12px
-//             &_text
-//                 width: 70px
-//         &_menu
-//             &_link
-//                 font-size: 12px
-//         &_info>a 
-//             font-size: 10px
-//         &_promotext
-//             font-size: 25px
-//     .dropdown-content
-//         left: 26%
-//     .consultation
-//         &_text
-//             font-size: 15px
-//             padding: 0 14px 0 14px
-//         &_btn
-//             width: 225px
-//             height: 45px
-//             font-size: 13px
-//     .footer_container>div:nth-child(1)
-//         padding-right: 50px
-//     .footer_container>div:nth-child(2)
-//         padding-right: 50px
-//     .services
-//         .container:last-child
-//             padding-bottom: 30px
-//         &_header
-//             font-size: 23px
-//             padding: 30px 0 0 0
-//         &_box1, &_box2
-//             display: flex
-//             flex-direction: column
-//             padding: 0
-//         &_items
-//             margin-top: 30px
-// @media (min-width: 480px) and (max-width:599px)
-//     .modal-content
-//         width: 300px
-//         &_header
-//             font-size: 25px
-//     input[type=text], input[type=button], textarea
-//         width: 250px
-//     .container 
-//         padding-left: 10px
-//         padding-right: 10px
-//     .services
-//         .container:last-child
-//             padding-bottom: 30px
-//         &_header
-//             font-size: 23px
-//             padding: 30px 0 0 0
-//         &_box1, &_box2
-//             display: flex
-//             flex-direction: column
-//             padding: 0
-//         &_items
-//             margin-top: 30px
-//     .footer_container>div:nth-child(1)
-//         padding-right: 30px
-//     .footer_container>div:nth-child(2)
-//         padding-right: 30px
-//     .footer
-//         &_container
-//             a 
-//                 font-size: 10px
-//         &_text
-//             font-size: 12px
-//     .header
-//         &_info
-//             padding-left: 5px
-//         &_logo
-//             padding-right: 5px
-//             font-size: 12px
-//             &_text
-//                 width: 70px
-//         &_menu
-//             &_link
-//                 font-size: 12px
-//         &_info
-//             display: none
-//         &_promotext
-//             font-size: 25px
-//     .dropdown-content
-//         left: 34%
-//     .consultation
-//         &_text
-//             font-size: 13px
-//             padding: 0 14px 0 14px
-//             width: 170px
-//         &_btn
-//             width: 180px
-//             height: 45px
-//             font-size: 12px
-// @media (min-width: 320px) and (max-width:479px)
-//     .modal-content
-//         width: 250px
-//         padding: 10px
-//         height: 420px
-//         &_header
-//             font-size: 18px
-//             padding: 15px 28px 0 28px
-//         &_text
-//             font-size: 11px
-//             padding-top: 10px
-//     input[type=text], input[type=button], textarea
-//         width: 230px
-//         margin: 10px auto 0
-//     textarea
-//         height: 80px
-//     .container 
-//         padding-left: 10px
-//         padding-right: 10px
-//     .services
-//         min-width: 320px
-//         .container:last-child
-//             padding-bottom: 30px
-//         &_header
-//             font-size: 23px
-//             padding: 30px 0 0 0
-//         &_box1, &_box2
-//             display: flex
-//             flex-direction: column
-//             align-items: center
-//             padding: 0
-//         &_items
-//             margin-top: 30px
-//             width: 200px
-//             height: 85px
-//         a 
-//             font-size: 9px
-//         &_header
-//             font-size: 18px
-//     .header
-//         height: 700px
-//         &_info
-//             display: none
-//         &_logo
-//             padding-right: 5px
-//             font-size: 16px
-//             &_text
-//                 width: 90px
-//         &_menu
-//             position: fixed
-//             flex-direction: column
-//             justify-content: center
-//             align-items: flex-start
-//             top: 0
-//             left: -100%
-//             width: 50%
-//             height: 100vh
-//             padding: 20px 20px
-//             background-color: rgba(0,0,0, .8)
-//             transition: 0.6s all
-//             &_active 
-//                 left: 0
-//             &_item 
-//                 padding-right: 0
-//                 border: none
-//                 margin: 10px 0
-//             &_link
-//                 font-size: 14px
-//         &_promotext
-//             font-size: 20px
-//             padding-top: 150px
-//     .hamburger
-//         display: block
-//         position: absolute
-//         right: 10px
-//         top: 3%
-//         width: 26px
-//         height: 12px
-//         span 
-//             display: block 
-//             height: 2px
-//             width: 100%
-//             background-color: #fff 
-//             margin-bottom: 2px
-//             transition: 0.5s all
-//         &_active 
-//             span 
-//                 margin-bottom: -2px 
-//                 &:nth-child(1)
-//                     transform: translateY(3px) rotate(-45deg)
-//                 &:nth-child(2)
-//                     display: none
-//                 &:nth-child(3)
-//                     transform: translateY(3px) rotate(45deg)
-//     .xs-hidden
-//         display: none
-//     .xs-visible 
-//         display: block
-//     .consultation
-//         &_img
-//             display: none
-//         &_text
-//             font-size: 12px
-//             padding: 0 14px 0 14px
-//             width: 140px
-//         &_btn
-//             width: 180px
-//             height: 45px
-//             font-size: 11px
-//             margin-right: 5px
-//     .footer_container>div:nth-child(1)
-//         padding-right: 20px
-//     .footer_container>div:nth-child(2)
-//         padding-right: 20px
-//     .footer
-//         &_container
-//             display: flex
-//             flex-direction: column
-//             padding: 26px 0 0 26px
-//             a 
-//                 font-size: 14px
-//             &_items
-//                 padding-bottom: 26px
-//         &_text
-//             font-size: 16px
-//         &_icons
-//             padding-top: 0
-//     .dropdown-content
-//         display: none
