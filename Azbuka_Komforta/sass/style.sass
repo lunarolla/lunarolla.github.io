@@ -230,7 +230,6 @@
 		font-weight: 600
 		font-size: 16px
 		transition: 0.3s
-		margin-left: 40px
 		color: #FFFFFF
 		outline: none
 	&_box:hover
@@ -292,9 +291,10 @@
 .white-popup
 	position: relative
 	background: #EDEDED
-	height: 600px
-	width: 720px
+	height: 100vh
+	width: 50%
 	margin: 0 auto
+	padding: 30px
 
 .mfp-zoom-in 
 	&.mfp-ready 
@@ -319,7 +319,7 @@
 			opacity: 0 
 
 input[type=text] 
-	width: 350px
+	width: 30vw
 	height: 40px
 	padding: 11px 18px
 	margin: 20px auto 0 
@@ -337,7 +337,7 @@ input[type=text]
 textarea 
 	display: block
 	margin: 20px auto 0 
-	width: 350px
+	width: 30vw
 	height: 120px
 	padding: 12px 20px
 	border: 1px solid #DCDCDC
@@ -354,7 +354,7 @@ textarea
 input[type=button]
 	display: block
 	margin: 30px auto 0
-	width: 350px
+	width: 30vw
 	height: 40px
 	background: #2553DE
 	border-radius: 3px
@@ -378,17 +378,22 @@ input[type=button]
 		font-weight: 600
 		font-size: 30px
 		line-height: 37px
-		color: #000000
+		color: #000000 
+		text-align: center
 	&_text
 		font-weight: 500
 		font-size: 14px
 		line-height: 17px
 		color: #A2A2A2
+		text-align: center
 
 @media ( max-width: 1200px)
 	.consultation
 		.row
 			justify-content: center
+	.modal
+		&_header
+			font-size: 27px
 	
 
 @media ( max-width: 990px)
@@ -403,6 +408,60 @@ input[type=button]
 	.footer
 		&_items
 			align-items: center
+		&_header
+			font-size: 25px
+		&_text
+			font-size: 12px
 
 
+@media ( max-width: 768px)
+	.header
+		&_info
+			display: none
+		&_promotext
+			font-size: 25px
+	.consultation
+		height: 160px
+		&_box
+			&_btn
+				padding-top: 10px
+	.footer
+		padding-top: 0px
+		&_items
+			align-items: flex-start
+			padding-top: 26px
+			&_header
+				font-size: 16px
+		&_items>div
+			a
+				font-size: 14px
+		&_text
+			font-size: 14px
+	.modal
+		&_header
+			font-size: 22px
+		&_text
+			font-size: 11px
+	.white-popup 
+		width: 70%
+	input[type=button], textarea, input[type=text]  
+		width: 40vw
 	
+@media ( max-width: 576px)
+	.footer
+		&_items
+			align-items: flex-start
+	input[type=button]
+		font-size: 12px
+	.header
+		&_promotext
+			font-size: 20px
+	.services
+		padding: 30px 0 30px 0
+		.row
+			display: flex
+			justify-content: center
+		&_header
+			font-size: 20px
+		&_items>a
+			font-size: 16px
