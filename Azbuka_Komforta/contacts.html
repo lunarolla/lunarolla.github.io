@@ -5,90 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azbuka Komforta</title>
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style_contacts.css">
 </head>
 <body>
-    <header class="header">
-        <nav>
-            <div class="container">
-                <ul class="header_menu">
-                    <a href="#" class="header_link">
-                        <div class="header_logo">
-                            <img src="icons/contacts/header/logo.svg" alt="logo">
-                            <div class="header_logo_text">Азбука Комфорта</div>
-                        </div>
-                    </a>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Главная</a></li>
-                    <li class="header_menu_item dropdown">
-                        <a href="javascript:void(0)" class="header_menu_link dropbtn">Услуги</a>
-                        <div class="dropdown-content">
-                            <a href="#">Промышленное оборудование<br>из нержавеющей стали</a>
-                            <a href="#">Вентиляция</a>
-                            <a href="#">Кондиционирование и<br>промышленный холод</a>
-                            <a href="#">Автоматизация<br>техпроцессов</a>
-                        </div>
-                    </li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">Контакты</a></li>
-                    <li class="header_menu_item"><a href="#" class="header_menu_link">О компании</a></li>
-                    <div class="header_info">
+    
+   
+
+    <!-- <section class="consultation">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-1 offset-xl-2 col-lg-2 col-md-2 col-sm-2 col-3 consultation_img">
+                    <img src="icons/consultation/headphones.svg" alt="headphones">
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-5 col-sm-8 col-9 consultation_text">
+                    <div>Хотите получить консультацию у нашего специалиста?</div>
+                </div>
+                <div class="col-xl-3 col-lg-4 col-md-5 col-sm-6 col-8">
+                    <div id="inline-popups2" class="consultation_box_btn">
+                        <a href="#test-popup" data-effect="mfp-zoom-in" class="consultation_box">Получить консультацию</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer_items col-xl-3 col-lg-3 offset-lg-2 col-md-4 col-sm-12">
+                    <div>
+                        <a href="#">
+                            <div>
+                                <img src="icons/footer/logo.svg" alt="footer_logo">
+                            </div>
+                        </a>
+                        <a href="tel:+79524255046">
+                            <div class="footer_items_info">
+                                <img src="icons/footer/phone.svg" alt="phone">
+                                +7 (952) 425-50-46
+                            </div>
+                        </a>
+                        <a href="tel:+79045332025">
+                            <div class="footer_items_info">
+                                <img src="icons/footer/phone.svg" alt="phone">
+                                +7 (904) 533-20-25
+                            </div>
+                        </a>
                         <a href="tel:+79524366870">
-                            <div class="header_info_phone">
-                                <img src="icons/contacts/header/phone.svg" alt="phone" class="header_info_img">
+                            <div class="footer_items_info">
+                                <img src="icons/footer/phone.svg" alt="phone">
                                 +7 (952) 436-68-70
                             </div>
                         </a>
                         <a href="mailto:info@azbukacomforta.ru">
-                            <div class="header_info_email">
-                                <img src="icons/contacts/header/mail.svg" alt="mail" class="header_info_img">
+                            <div class="footer_items_info">
+                                <img src="icons/footer/mail.svg" alt="mail">
                                 info@azbukacomforta.ru
                             </div>
                         </a>
                     </div>
-                </ul>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
-    
-    <section class="contacts">
-        <div class="container">
-            <div class="contacts_header">Контакты</div>
-            <div class="contacts_box">
-                <div class="contacts_box_items">
-                    <img src="icons/contacts/contact/placeholder.svg" alt="adress" class="contacts_box_items_img">
-                    <div class="contacts_box_items_header">Адрес</div>
-                    <div class="contacts_box_items_text">308007, РФ,<br>
-                        Белгородская область,<br>
-                        г.Белгород,<br>
-                        ул.Студенческая 17г</div>
                 </div>
-                <div class="contacts_box_items">
-                    <img src="icons/contacts/contact/email.svg" alt="email" class="contacts_box_items_img">
-                    <div class="contacts_box_items_header">E-mail: </div>
-                    <div class="contacts_box_items_text">azcomfort@mail.ru<br>
-                        info@azbukacomforta.ru</div>
+                <div class="footer_items col-xl-2 col-lg-2 col-md-4 col-sm-12">
+                    <div>
+                        <div class="footer_items_header">Меню</div>
+                        <a href="#"><div>Главная</div></a>
+                        <a href="#"><div>Услуги</div></a>
+                        <a href="#"><div>Контакты</div></a>
+                        <a href="#"><div>О компании</div></a>
+                    </div>
                 </div>
-                <div class="contacts_box_items">
-                    <img src="icons/contacts/contact/call.svg" alt="phone" class="contacts_box_items_img">
-                    <div class="contacts_box_items_header">Номера телефонов:</div>
-                    <div class="contacts_box_items_text">+7 (952) 425-50-46<br>
-                        +7 (904) 533-20-25<br>
-                        +7 (952) 436-68-70<br></div>
+                <div class="footer_items col-xl-5 col-lg-5 col-md-4 col-sm-12">
+                    <div>
+                        <div class="footer_items_header">Услуги</div>
+                        <a href="#"><div>Промышленное оборудование<br>из нержавеющей стали</div></a>
+                        <a href="#"><div>Вентиляция</div></a>
+                        <a href="#"><div>Кондиционирование и<br>промышленный холод</div></a>
+                        <a href="#"><div>Автоматизация<br>техпроцессов</div></a>
+                    </div>
+                    
                 </div>
-            </div>
-            <div class="contacts_box2">
-                <div class="contacts_box2_map"></div>
-                <div class="contacts_box2_form"></div>
+                <div class="footer_icons col-xl-12">
+                    <a href="#"><img src="icons/footer/instagram.svg" alt="instagram"></a>
+                    <a href="#"><img src="icons/footer/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="icons/footer/whatsapp.svg" alt="whatsapp"></a>
+                    <a href="#"><img src="icons/footer/telegram.svg" alt="telegram"></a>
+                    <a href="#"><img src="icons/footer/viber.svg" alt="viber"></a>
+                </div>
+                <div class="footer_text col-12">© 2020 Все права защищены</div>
             </div>
         </div>
-        
-    </section>
+    </footer> -->
 
 </body>
 </html>
+
+
