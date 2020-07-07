@@ -24,9 +24,9 @@
                     </div>
                     <div class="header_menu col-xl-5 col-lg-6 col-md-8 col-sm-9 col-8">
                         <ul>
-                            <li class="header_menu_item"><a href="#" class="header_menu_link">Главная</a></li>
+                            <li class="header_menu_item"><a href="index.html" class="header_menu_link">Главная</a></li>
                             <li class="header_menu_item dropdown">
-                                <a href="javascript:void(0)" class="header_menu_link dropbtn">Услуги</a>
+                                <a href="services.html" class="header_menu_link dropbtn">Услуги</a>
                                 <div class="dropdown-content">
                                     <a href="#">Промышленное оборудование<br>из нержавеющей стали</a>
                                     <a href="#">Вентиляция</a>
@@ -204,22 +204,7 @@
     </div> 
 
     <script src="js/jquery.magnific-popup.js"></script>
-    <script>
-        $('#inline-popups, #inline-popups2').magnificPopup({
-        delegate: 'a',
-        removalDelay: 500, 
-        callbacks: {
-            beforeOpen: function() {
-            this.st.mainClass = this.st.el.attr('data-effect');
-            }
-        },
-        midClick: true 
-        });
-
-        $(".hamburger").click(function() {
-        $(this).toggleClass('close');
-        });
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 

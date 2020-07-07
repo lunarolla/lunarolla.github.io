@@ -1,0 +1,126 @@
+@font-face 
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 400
+	src: url('../fonts/montserrat-v14-cyrillic-regular.eot') 
+	src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/montserrat-v14-cyrillic-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-regular.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-regular.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-regular.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-regular.svg#Montserrat') format('svg')
+
+@font-face 
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 500
+	src: url('../fonts/montserrat-v14-cyrillic-500.eot')
+	src: local('Montserrat Medium'), local('Montserrat-Medium'), url('../fonts/montserrat-v14-cyrillic-500.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-500.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-500.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-500.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-500.svg#Montserrat') format('svg')
+
+@font-face 
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 600
+	src: url('../fonts/montserrat-v14-cyrillic-600.eot')
+	src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url('../fonts/montserrat-v14-cyrillic-600.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-600.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-600.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-600.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-600.svg#Montserrat') format('svg')
+
+@font-face 
+	font-family: 'Montserrat'
+	font-style: normal
+	font-weight: 700
+	src: url('../fonts/montserrat-v14-cyrillic-700.eot')
+	src: local('Montserrat Bold'), local('Montserrat-Bold'), url('../fonts/montserrat-v14-cyrillic-700.eot?#iefix') format('embedded-opentype'), url('../fonts/montserrat-v14-cyrillic-700.woff2') format('woff2'), url('../fonts/montserrat-v14-cyrillic-700.woff') format('woff'), url('../fonts/montserrat-v14-cyrillic-700.ttf') format('truetype'), url('../fonts/montserrat-v14-cyrillic-700.svg#Montserrat') format('svg')
+
+*
+	font-family: 'Montserrat', sans-serif
+
+.dropdown 
+	display: inline-block
+
+.dropdown-content 
+	display: none
+	position: absolute
+	background-color: #f9f9f9
+	min-width: 232px
+	z-index: 1
+	top: 45px
+	&::before
+		height: 14px
+		position: absolute
+		top: -14px
+		width: 233px
+		content: " "
+		display: block
+
+.dropdown-content>a 
+	font-weight: 500
+	font-size: 12px
+	color: #000000
+	padding: 14px 14px
+	text-decoration: none
+	display: block
+	border-bottom: 1px solid #e5e5e5
+	transition: 0.3s
+
+.dropdown-content>a:nth-child(2)
+	padding: 21px 14px
+
+.dropdown-content>a:hover 
+		color: #2553DE
+
+.dropdown
+	&:hover
+		.dropdown-content 
+			display: block
+
+.header
+	height: 88px 
+	background: #FBFBFB
+	nav
+		padding: 22px 0
+	&_logo
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		overflow: hidden
+		text-decoration: none
+	&_menu
+		display: flex
+		justify-content: center
+		align-items: center
+		&_item
+			margin-right: 30px
+		&_item>a
+			text-decoration: none
+			font-weight: 500
+			font-size: 14px
+			color: #7E7E7E
+		&_item>a:hover
+			color: #2553DE
+	&_menu>ul 
+		list-style-type: none
+		display: flex
+		flex-direction: row
+		margin: 0
+		padding: 0
+	&_info
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		&_email
+			padding-top: 12px
+			font-weight: 500
+			font-size: 12px
+		&_phone
+			font-weight: 500
+			font-size: 12px
+		&_phone>a, &_email>a
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #fbfbfb
+			color: #7E7E7E
+		&_phone>a:hover, &_email>a:hover
+			text-decoration: none
+			color: #2553DE
+		&_img
+			padding-right: 6px
+	&_info>div
+		display: flex
+		align-items: flex-start
+		flex-direction: column

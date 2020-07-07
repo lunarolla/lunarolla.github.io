@@ -1,10 +1,14 @@
-$('#inline-popups').magnificPopup({
+$('#inline-popups, #inline-popups2').magnificPopup({
   delegate: 'a',
-  removalDelay: 500, //delay removal by X to allow out-animation
+  removalDelay: 500, 
   callbacks: {
-    beforeOpen: function() {
-       this.st.mainClass = this.st.el.attr('data-effect');
-    }
+      beforeOpen: function() {
+      this.st.mainClass = this.st.el.attr('data-effect');
+      }
   },
-  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-});
+  midClick: true 
+  });
+
+  $(".hamburger").click(function() {
+  $(this).toggleClass('close');
+  });
