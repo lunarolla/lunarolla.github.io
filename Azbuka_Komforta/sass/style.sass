@@ -124,7 +124,7 @@
 			transition: 0.5s
 		&_phone>a:hover, &_email>a:hover
 			text-decoration: none
-			color: #E5E5E5
+			color: #a5a4a4
 		&_img
 			padding-right: 6px
 	&_info>div
@@ -214,6 +214,7 @@
 		cursor: default
 	&_img>img
 		padding-right: 34px	
+		height: 65px
 	&_box
 		display: flex
 		align-items: center
@@ -405,8 +406,14 @@ input[type=button]
 			justify-content: center
 		&_header
 			text-align: center 
+	.header
+		&_logo
+			img
+				width: 100%
+	.consultation
+		padding: 40px 0
 
-@media ( max-width: 990px)
+@media ( max-width: 992px)
 	.services
 		padding: 40px 0 40px 0
 		&_header
@@ -427,7 +434,7 @@ input[type=button]
 		width: 60%
 	.consultation
 		&_img
-			font-size: 16px
+			font-size: 18px
 		&_box
 			font-size: 13px
 
@@ -442,7 +449,7 @@ input[type=button]
 		&_menu
 			display: none
 		&_logo
-			justify-content: flex-end
+			justify-content: center
 	.consultation
 		.row
 			display: flex
@@ -451,18 +458,16 @@ input[type=button]
 			&_btn
 				padding-top: 20px
 	.footer
-		padding-top: 0px
+		.container
+			display: flex
+			justify-content: center
 		&_items
 			align-items: flex-start
 			&_2
 				display: none
-			&_header
-				font-size: 16px
 		&_items>div
 			a
 				font-size: 14px
-		&_text
-			font-size: 14px
 	.services
 		.row
 			display: flex
@@ -480,16 +485,22 @@ input[type=button]
 		width: 40vw
 	
 @media ( max-width: 576px)
+	.header
+		&_promotext
+			padding-left: 40px
 	.footer
 		&_items
 			align-items: flex-start
 		.row
-			padding-left: 20px
+			padding-left: 40px
+		&_items
+			&_2 
+				display: flex
 	input[type=button]
 		font-size: 12px
 	.header
 		&_promotext
-			font-size: 15px
+			font-size: 20px
 		&_promobtn
 			font-size: 13px
 	.services
@@ -498,9 +509,9 @@ input[type=button]
 			display: flex
 			justify-content: center
 		&_header
-			font-size: 20px
-		&_items>a
-			font-size: 12px
+			font-size: 18px
+	.consultation_img>img 
+		height: 50px
 
 @media ( max-width: 300px)
 	.header
