@@ -7,6 +7,8 @@
     <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -126,7 +128,7 @@
                     <span>Хотите получить консультацию у нашего специалиста?</span>
                 </div>
                 <div class="col-xl-3 col-lg-4 col-md-4 col-sm-6 col-5">
-                    <div id="inline-popups2" class="consultation_box_btn">
+                    <div class="consultation_box_btn open_form">
                         <a href="#test-popup" data-effect="mfp-zoom-in" class="consultation_box">Получить консультацию</a>
                     </div>
                 </div>
@@ -189,6 +191,26 @@
             </div>
         </div>
     </footer>
+
+    <div id="test-popup" class="modal white-popup mfp-with-anim mfp-hide">
+        <div class="modal">
+            <span class="close"></span>
+            <p class="modal_header">Получите бесплатную консультацию:</p>
+            <p class="modal_text">Заполните форму и наш сотрудник свяжется с Вами в течении дня.</p>
+            <form>
+                <div class="form">
+                    <input type="text" id="fname" name="fname" placeholder="Имя">
+                    <input type="text" id="lname" name="lname" placeholder="Фамилия">
+                    <input type="text" id="telephone" name="telephone" placeholder="Телефон">
+                    <textarea placeholder="Коммментарий"></textarea>
+                </div>
+                <input type="button" value="Получить консультацию">
+            </form>
+        </div>
+    </div> 
+
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
