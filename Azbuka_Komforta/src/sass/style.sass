@@ -679,97 +679,6 @@ input[type=text_contacts]
 			display: flex
 			justify-content: flex-end
 
-label
-	margin: 0
-
-input
-	position: absolute
-	opacity: 0
-	z-index: -1
-
-.tab
-	width: 100%
-	color: white
-	overflow: hidden
-
-.tab-label
-	height: 82px
-	border-right: 1px solid #dcdcdc
-	border-left: 1px solid #dcdcdc
-	box-sizing: border-box
-	padding: 30px 40px
-	text-align: left
-	outline: none
-	font-weight: 500
-	font-size: 18px
-	line-height: 22px
-	color: #7e7e7e
-	display: flex
-	justify-content: space-between
-	background: #f7f7f7
-	cursor: pointer
-	&_1
-		border-top: 1px solid #dcdcdc
-	&::after
-		content: url("../icons/services_page/expand_more.svg")
-		width: 1em
-		height: 1em
-		text-align: center
-		transition: all 0.35s
-
-.tab-content
-	max-height: 0
-	padding: 0 2.45em
-	transition: all 0.5s
-	cursor: default
-	border: 1px solid #dcdcdc
-	background-color: #f7f7f7
-	font-weight: 500
-	font-size: 15px
-	line-height: 18px
-	color: #000
-	ul 
-		padding: 0
-		margin: 0
-		color: black
-		list-style: none
-		li::before 
-			content: "•"
-			color: #2553DE
-	p
-		margin-bottom: 0
-	&_text
-		font-weight: 500
-		font-size: 15px
-		line-height: 18px
-		color: #000000
-	&_subheader
-		margin: 30px 0
-		font-size: 16px
-		font-weight: bold
-		line-height: 20px
-		color: #000000
-	&_img
-		padding-top: 30px
-		display: flex
-		justify-content: space-between
-		img
-			width: 324px
-			height: 215px
-
-input:checked
-	+ .tab-label::after
-		transform: rotate(180deg)
-
-	~ .tab-content
-		max-height: 100%
-		padding: 2.45em
-
-.collapse
-	padding: 60px
-	height: 100%
-	background: #f7f7f7
-
 .fill_form
 	cursor: default
 	display: flex
@@ -861,3 +770,110 @@ input[type=text_services]
 			height: 150px
 			font-size: 18px
 			padding: 25px 25px
+
+.main_content_industrial_equipment
+	height: 100vh
+	background: url(../img/industrial_equipment_bg.jpg) center center/cover no-repeat 
+	display: flex
+	align-items: center
+	&_img
+		display: flex
+		align-items: center
+
+.main_content_industrial_img_img
+	width: 445px
+	height: 265px
+
+.fill_form_industrial_equipment
+	background: url(../img/industrial_equipment.png) center center/cover no-repeat 
+
+label
+	margin: 0
+
+.input
+	position: absolute
+	opacity: 0
+	z-index: -1
+
+.tab
+	width: 100%
+	color: white
+	overflow: hidden
+
+.tab-label
+	height: 82px
+	border-right: 1px solid #dcdcdc
+	border-left: 1px solid #dcdcdc
+	box-sizing: border-box
+	padding: 30px 40px
+	text-align: left
+	outline: none
+	font-weight: 500
+	font-size: 18px
+	line-height: 22px
+	color: #7e7e7e
+	display: flex
+	justify-content: space-between
+	background: #f7f7f7
+	cursor: pointer
+	&_1
+		border-top: 1px solid #dcdcdc
+	&::after
+		content: url("../icons/services_page/expand_more.svg")
+		width: 1em
+		height: 1em
+		text-align: center
+		transition: all 0.35s
+
+.tab-content
+	max-height: 0
+	padding: 0 2.45em
+	transition: all 0.5s
+	cursor: default
+	border: 1px solid #dcdcdc
+	background-color: #f7f7f7
+	font-weight: 500
+	font-size: 15px
+	line-height: 18px
+	color: #000
+	ul 
+		padding: 0
+		margin: 0
+		color: black
+		list-style: none
+		li::before 
+			content: "•"
+			color: #2553DE
+	p
+		margin-bottom: 0
+	&_text
+		font-weight: 500
+		font-size: 15px
+		line-height: 18px
+		color: #000000
+	&_subheader
+		margin: 30px 0
+		font-size: 16px
+		font-weight: bold
+		line-height: 20px
+		color: #000000
+	&_img
+		padding-top: 30px
+		display: flex
+		justify-content: space-between
+		img
+			width: 324px
+			height: 215px
+
+input:checked
+	+ .tab-label::after
+		transform: rotate(180deg)
+
+	~ .tab-content
+		max-height: 100%
+		padding: 2.45em
+
+.collapse
+	padding: 60px
+	height: 100%
+	background: #f7f7f7
