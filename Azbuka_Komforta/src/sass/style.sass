@@ -196,8 +196,8 @@
 		text-decoration: none
 	&_items>a>img
 			padding-right: 16px
-			height: 56px
-			width: 56px
+			height: 60px
+			width: 60px
 
 .consultation
 	.row
@@ -569,7 +569,7 @@ input[type=button]
 		color: #2553DE
 
 .services_contacts
-	background: #f1f1f1
+	background: #f7f7f7
 	&_header
 		font-weight: 600
 		font-size: 36px
@@ -648,7 +648,7 @@ input[type=text_contacts]
 	display: flex
 	align-items: center
 	&_img
-		height: 100%
+		min-height: 400px
 		background: url(../icons/services_page/main_content_bg.png) center center/cover no-repeat 
 		&_text
 			display: flex
@@ -679,46 +679,57 @@ input[type=text_contacts]
 			display: flex
 			justify-content: flex-end
 
-.collapsible, .collapsible_1, .collapsible_2, .collapsible_3, .collapsible_4, .collapsible_5, .collapsible_6, .collapsible_7
-	width: 1110px
-	height: 82px
-	border: 1px solid #DCDCDC
-	box-sizing: border-box
-	cursor: pointer
-	padding: 30px 40px
+label
+	margin: 0
+
+input
+	position: absolute
+	opacity: 0
+	z-index: -1
+
+.tab
 	width: 100%
+	color: white
+	overflow: hidden
+
+.tab-label
+	height: 82px
+	border-right: 1px solid #dcdcdc
+	border-left: 1px solid #dcdcdc
+	box-sizing: border-box
+	padding: 30px 40px
 	text-align: left
 	outline: none
 	font-weight: 500
 	font-size: 18px
 	line-height: 22px
-	color: #7E7E7E
+	color: #7e7e7e
+	display: flex
+	justify-content: space-between
+	background: #f7f7f7
+	cursor: pointer
+	&_1
+		border-top: 1px solid #dcdcdc
+	&::after
+		content: url("../icons/services_page/expand_more.svg")
+		width: 1em
+		height: 1em
+		text-align: center
+		transition: all 0.35s
 
-.collapsible:focus, .collapsible_1:focus, .collapsible_2:focus, .collapsible_3:focus, .collapsible_4:focus, .collapsible_5:focus, .collapsible_6:focus, .collapsible_7:focus
-	outline: none
-
-.collapsible:after, .collapsible_1:after, .collapsible_2:after, .collapsible_3:after, .collapsible_4:after, .collapsible_5:after, .collapsible_6:after, .collapsible_7:after
-	content: url("../icons/services_page/expand_more.svg")
-	color: #7E7E7E
-	font-weight: bold
-	float: right
-	margin-left: 5px
-
-.active:after 
-	content: url("../icons/services_page/expand_less.svg")
-
-.content 
+.tab-content
+	max-height: 0
+	padding: 0 2.45em
+	transition: all 0.5s
 	cursor: default
-	width: 100%
-	padding: 30px 40px
-	display: none
-	overflow: hidden
-	border: 1px solid #DCDCDC
-	background-color: #f1f1f1
+	border: 1px solid #dcdcdc
+	background-color: #f7f7f7
 	font-weight: 500
 	font-size: 15px
 	line-height: 18px
+	color: #000
 	ul 
+		padding: 0
 		margin: 0
 		color: black
 		list-style: none
@@ -746,15 +757,25 @@ input[type=text_contacts]
 			width: 324px
 			height: 215px
 
+input:checked
+	+ .tab-label::after
+		transform: rotate(180deg)
+
+	~ .tab-content
+		max-height: 100%
+		padding: 2.45em
+
 .collapse
 	padding: 60px
 	height: 100%
-	background: #f1f1f1
+	background: #f7f7f7
 
 .fill_form
 	cursor: default
-	padding: 133px 0
-	height: 100%
+	display: flex
+	align-items: center
+	padding: 40px 0
+	min-height: 400px
 	background: url(../img/air_conditioner.jpg) center center/cover no-repeat 
 	&_text
 		display: flex
@@ -769,6 +790,7 @@ input[type=text_contacts]
 			padding-top: 24px
 			font-size: 18px
 			line-height: 22px
+			font-weight: 500
 	&_subheader
 		display: flex
 		justify-content: center
@@ -776,7 +798,7 @@ input[type=text_contacts]
 
 .project
 	padding: 60px 0 
-	background: #f1f1f1
+	background: #f7f7f7
 	&_header	
 		cursor: default
 		padding-bottom: 40px
@@ -803,7 +825,7 @@ input[type=text_services]
 		border-radius: 3px
 
 .form_to_call
-	background: #f1f1f1
+	background: #f7f7f7
 	&_header
 		font-weight: 600
 		font-size: 28px
@@ -821,6 +843,7 @@ input[type=text_services]
 	height: 40px
 	margin: 20px auto 0 
 	border-radius: 3px
+	font-size: 14px
 	border: none
 	&:focus
 		outline: none
@@ -828,10 +851,13 @@ input[type=text_services]
 		border-radius: 3px
 
 .services_services
-	background: #f1f1f1
+	background: #f7f7f7
+	&_header
+		font-size: 28px
 	&_items
-		font-weight: 500
-		font-size: 18px
 		line-height: 22px
 		a
+			font-weight: 500
 			height: 150px
+			font-size: 18px
+			padding: 25px 25px
