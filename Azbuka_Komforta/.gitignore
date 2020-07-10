@@ -1,0 +1,3 @@
+/vendor/node_modules/*
+!/vendor/node_modules/jquery/
+!/vendor/node_modules/semantic/
