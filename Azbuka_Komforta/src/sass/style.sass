@@ -791,27 +791,240 @@ input[type=text_services]
 .fill_form_industrial_equipment
 	background: url(../img/industrial_equipment.png) center center/cover no-repeat 
 
-label
-	margin: 0
 
-.input
-	position: absolute
-	opacity: 0
-	z-index: -1
 
-.tab
-	width: 100%
-	color: white
-	overflow: hidden
+// * 
+// 	list-style: none
+// 	margin: 0
+// 	padding: 0
+// 	font-family: sans-serif
 
-.tab-label
+// .container 
+// 	max-width: 600px
+// 	margin: 0 auto
+
+// .accordion 
+// 	padding-top: 40px
+
+// /* COPY THIS */
+
+// .accordion__title 
+// 	position: relative
+// 	height: 82px
+// 	border-right: 1px solid #dcdcdc
+// 	border-left: 1px solid #dcdcdc
+// 	box-sizing: border-box
+// 	padding: 30px 40px
+// 	font-weight: 500
+// 	font-size: 18px
+// 	line-height: 22px
+// 	color: #7e7e7e
+// 	display: flex
+// 	justify-content: space-between
+// 	background: #f7f7f7
+// 	cursor: pointer
+// 	&_title_1{
+// 	border-top: 1px solid #dcdcdc
+
+// .accordion__icon 
+// 	width: 20px
+// 	height: 20px
+// 	background-image: url(expand_more.svg)
+// 	background-repeat: no-repeat
+// 	transition: all .4s ease-in-out
+
+// .accordion__content 
+// 	max-height: 0
+// 	overflow: hidden
+// 	transition: all .6s ease-in-out
+// 	padding: 0 40px
+// 	cursor: default
+// 	border: 1px solid #dcdcdc
+// 	background-color: #f7f7f7
+// 	font-weight: 500
+// 	font-size: 15px
+// 	line-height: 18px
+// 	color: #000
+// 	ul 
+// 		padding: 0
+// 		margin: 0
+// 		color: black
+// 		list-style: none
+// 		padding: 24px 0
+// 	p 
+// 		padding: 24px 0
+
+// .active .accordion__content 
+// 	max-height: 500px
+
+// .active .accordion__icon 
+// 	transform: rotate(180deg)
+
+
+
+// label
+// 	margin: 0
+
+// .input
+// 	position: absolute
+// 	opacity: 0
+// 	z-index: -1
+
+// .tab
+// 	width: 100%
+// 	color: white
+// 	overflow: hidden
+
+// .tab-label
+// 	height: 82px
+// 	border-right: 1px solid #dcdcdc
+// 	border-left: 1px solid #dcdcdc
+// 	box-sizing: border-box
+// 	padding: 30px 40px
+// 	text-align: left
+// 	outline: none
+// 	font-weight: 500
+// 	font-size: 18px
+// 	line-height: 22px
+// 	color: #7e7e7e
+// 	display: flex
+// 	justify-content: space-between
+// 	background: #f7f7f7
+// 	cursor: pointer
+// 	&_1
+// 		border-top: 1px solid #dcdcdc
+// 	&::after
+// 		content: url("../icons/services_page/expand_more.svg")
+// 		width: 1em
+// 		height: 1em
+// 		text-align: center
+// 		transition: all 0.35s
+
+// .tab-content
+// 	max-height: 0
+// 	padding: 0 2.45em
+// 	transition: all 0.5s
+// 	cursor: default
+// 	border: 1px solid #dcdcdc
+// 	background-color: #f7f7f7
+// 	font-weight: 500
+// 	font-size: 15px
+// 	line-height: 18px
+// 	color: #000
+// 	ul 
+// 		padding: 0
+// 		margin: 0
+// 		color: black
+// 		list-style: none
+// 		li::before 
+// 			content: "•"
+// 			color: #2553DE
+// 	p
+// 		margin-bottom: 0
+// 	&_text
+// 		font-weight: 500
+// 		font-size: 15px
+// 		line-height: 18px
+// 		color: #000000
+// 	&_subheader
+// 		margin: 30px 0
+// 		font-size: 16px
+// 		font-weight: bold
+// 		line-height: 20px
+// 		color: #000000
+// 	&_img
+// 		padding-top: 30px
+// 		display: flex
+// 		justify-content: space-between
+// 		img
+// 			width: 324px
+// 			height: 215px
+
+.collapse
+	padding: 60px
+	height: 100%
+	background: #f7f7f7
+
+
+
+// * 
+// 	list-style: none
+// 	margin: 0
+// 	padding: 0
+// 	font-family: sans-serif
+
+// .container 
+// 	max-width: 600px
+// 	margin: 0 auto
+
+// .accordion 
+// 	padding-top: 40px
+
+// /* COPY THIS */
+
+// .accordion__title 
+// 	position: relative
+// 	height: 82px
+// 	border-right: 1px solid #dcdcdc
+// 	border-left: 1px solid #dcdcdc
+// 	box-sizing: border-box
+// 	padding: 30px 40px
+// 	font-weight: 500
+// 	font-size: 18px
+// 	line-height: 22px
+// 	color: #7e7e7e
+// 	display: flex
+// 	justify-content: space-between
+// 	background: #f7f7f7
+// 	cursor: pointer
+// 	&_title_1{
+// 	border-top: 1px solid #dcdcdc
+
+// .accordion__icon 
+// 	width: 20px
+// 	height: 20px
+// 	background-image: url(expand_more.svg)
+// 	background-repeat: no-repeat
+// 	transition: all .4s ease-in-out
+
+// .accordion__content 
+// 	max-height: 0
+// 	overflow: hidden
+// 	transition: all .6s ease-in-out
+// 	padding: 0 40px
+// 	cursor: default
+// 	border: 1px solid #dcdcdc
+// 	background-color: #f7f7f7
+// 	font-weight: 500
+// 	font-size: 15px
+// 	line-height: 18px
+// 	color: #000
+// 	ul 
+// 		padding: 0
+// 		margin: 0
+// 		color: black
+// 		list-style: none
+// 		padding: 24px 0
+// 	p 
+// 		padding: 24px 0
+
+// .active .accordion__content 
+// 	max-height: 500px
+
+// .active .accordion__icon 
+// 	transform: rotate(180deg)
+
+.accordion
+	ul 
+		list-style: none
+
+.accordion__title
+	position: relative
 	height: 82px
 	border-right: 1px solid #dcdcdc
 	border-left: 1px solid #dcdcdc
 	box-sizing: border-box
 	padding: 30px 40px
-	text-align: left
-	outline: none
 	font-weight: 500
 	font-size: 18px
 	line-height: 22px
@@ -822,17 +1035,19 @@ label
 	cursor: pointer
 	&_1
 		border-top: 1px solid #dcdcdc
-	&::after
-		content: url("../icons/services_page/expand_more.svg")
-		width: 1em
-		height: 1em
-		text-align: center
-		transition: all 0.35s
 
-.tab-content
+.accordion__icon
+	width: 20px
+	height: 20px
+	background-image: url(../icons/services_page/expand_more.svg)
+	background-repeat: no-repeat
+	transition: all .4s ease-in-out
+
+.accordion__content
 	max-height: 0
-	padding: 0 2.45em
-	transition: all 0.5s
+	overflow: hidden
+	transition: all .4s ease-in-out
+	padding: 0 40px
 	cursor: default
 	border: 1px solid #dcdcdc
 	background-color: #f7f7f7
@@ -840,45 +1055,18 @@ label
 	font-size: 15px
 	line-height: 18px
 	color: #000
-	ul 
+	ul
 		padding: 0
 		margin: 0
 		color: black
 		list-style: none
-		li::before 
-			content: "•"
-			color: #2553DE
+		padding: 24px 0
 	p
-		margin-bottom: 0
-	&_text
-		font-weight: 500
-		font-size: 15px
-		line-height: 18px
-		color: #000000
-	&_subheader
-		margin: 30px 0
-		font-size: 16px
-		font-weight: bold
-		line-height: 20px
-		color: #000000
-	&_img
-		padding-top: 30px
-		display: flex
-		justify-content: space-between
-		img
-			width: 324px
-			height: 215px
+		padding: 24px 0
+		margin: 0
 
-input:checked
-	+ .tab-label::after
+.active
+	.accordion__content
+		max-height: 500px
+	.accordion__icon
 		transform: rotate(180deg)
-
-	~ .tab-content
-		max-height: 100%
-		padding: 2.45em
-
-.collapse
-	padding: 60px
-	height: 100%
-	background: #f7f7f7
-

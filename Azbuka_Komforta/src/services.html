@@ -86,51 +86,65 @@
     <section class="collapse">
         <div class="container">
             <div class="row">
-                <div class="tab">
-                    <input class="input" type="checkbox" id="chck1">
-                    <label class="tab-label tab-label_1" for="chck1">Что мы предлагаем:</label>
-                    <div class="tab-content">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, reiciendis!
-                    </div>
-                </div>
-                <div class="tab">
-                    <input class="input" type="checkbox" id="chck2">
-                    <label class="tab-label" for="chck2">С какими системами мы работаем:</label>
-                    <div class="tab-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
-                    </div>
-                </div>
-                <div class="tab">
-                    <input class="input" type="checkbox" id="chck3">
-                    <label class="tab-label" for="chck3">С какими объектами мы работаем:</label>
-                    <div class="tab-content">
-                        <ul>
-                            <li>торгово-офисные комплексы;</li>
-                            <li>банки;</li>
-                            <li>медицинские учреждения (медцентры, клиники, больницы, поликлиники);</li>
-                            <li>спортивные объекты (спорткомплексы, катки, бассейны, фитнес-центры);</li>
-                            <li>торговые объекты;</li>
-                            <li>предприятия общественного питания;</li>
-                            <li>учебные заведения (дошкольные, школы, колледжи, ВУЗы);</li>
-                            <li>госучреждения;</li>
-                            <li>промышленные объекты;</li>
-                            <li>жилые помещения (квартиры, дома).</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="tab">
-                    <input class="input" type="checkbox" id="chck4">
-                    <label class="tab-label" for="chck4">Регионы наших работ:</label>
-                    <div class="tab-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
-                    </div>
-                </div>
-                <div class="tab">
-                    <input class="input" type="checkbox" id="chck5">
-                    <label class="tab-label" for="chck5">Наши преимущества:</label>
-                    <div class="tab-content">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
-                    </div>
+                <div class="accordion">
+                    <ul class="accordion__items">
+                        <li class="accordion__item">
+                            <div class="accordion__title accordion__title_1">
+                                <div>Что мы предлагаем:</div>
+                                <span class="accordion__icon"></span>
+                            </div>
+                            <div class="accordion__content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae cumque quod quam quidem? Cupiditate, provident?</p>
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <div class="accordion__title">
+                                <div>С какими системами мы работаем:</div>
+                                <span class="accordion__icon"></span>
+                            </div>
+                            <div class="accordion__content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae cumque quod quam quidem? Cupiditate, provident?</p>
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <div class="accordion__title">
+                                <div>С какими объектами мы работаем:</div>
+                                <span class="accordion__icon"></span>
+                            </div>
+                            <div class="accordion__content">
+                                <ul>
+                                    <li>торгово-офисные комплексы;</li>
+                                    <li>банки;</li>
+                                    <li>медицинские учреждения (медцентры, клиники, больницы, поликлиники);</li>
+                                    <li>спортивные объекты (спорткомплексы, катки, бассейны, фитнес-центры);</li>
+                                    <li>торговые объекты;</li>
+                                    <li>предприятия общественного питания;</li>
+                                    <li>учебные заведения (дошкольные, школы, колледжи, ВУЗы);</li>
+                                    <li>госучреждения;</li>
+                                    <li>промышленные объекты;</li>
+                                    <li>жилые помещения (квартиры, дома).</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <div class="accordion__title">
+                                <div>Регионы наших работ:</div>
+                                <span class="accordion__icon"></span>
+                            </div>
+                            <div class="accordion__content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae cumque quod quam quidem? Cupiditate, provident?</p>
+                            </div>
+                        </li>
+                        <li class="accordion__item">
+                            <div class="accordion__title">
+                                <div>Наши преимущества:</div>
+                                <span class="accordion__icon"></span>
+                            </div>
+                            <div class="accordion__content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, nesciunt est voluptates earum sint laborum eligendi blanditiis commodi. Consequuntur culpa ad voluptates aut vitae cumque quod quam quidem? Cupiditate, provident?</p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -365,6 +379,27 @@
 
     <script src="js/jquery.magnific-popup.js"></script>
     <script src="js/script.js"></script>
+    <script>
+		let accordion = document.querySelector('.accordion');
+		let items = accordion.querySelectorAll('.accordion__item');
+		let title = accordion.querySelectorAll('.accordion__title');
+
+		function toggleAccordion() {
+		let thisItem = this.parentNode;
+		
+		items.forEach(item => {
+			if (thisItem == item ) {
+			// if this item is equal to the clicked item, open it.
+			thisItem.classList.toggle('active');
+			return;
+			} 
+			// otherwise, remove the open class
+			item.classList.remove('active');
+		});
+		}
+
+		title.forEach(question => question.addEventListener('click', toggleAccordion));
+	</script>
 
 </body>
 </html>
