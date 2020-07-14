@@ -12,3 +12,15 @@ $('.open_form').magnificPopup({
   $(".hamburger").click(function() {
   $(this).toggleClass('close');
   });
+
+  $(document).ready(function(){
+    $(".dropdown-content").mouseover(function(){
+
+      $(".dropbtn ").addClass("border_menu_item"); //naved
+
+    });
+    $(".dropdown-content").mouseout(function(){
+      $(".dropbtn ").removeClass("border_menu_item"); //otpus
+    });
+  });
+
