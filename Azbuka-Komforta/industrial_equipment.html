@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azbuka Komforta</title>
     <link rel="shortcut icon" href="icons/favicon.png" type="image/x-icon">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
+
+    <div class="container_humb">
+        <nav class="nav-bar">
+          <div class="toggle-menu">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-list-item"><a href="index.html" class="nav-link">Главная</a></li>
+            <li class="nav-list-item"><a href="services.html" class="nav-link">Услуги</a></li>
+            <li class="nav-list-item"><a href="contacts.html" class="nav-link">Контакты</a></li>
+            <li class="nav-list-item">
+              <a href="about_company.html" class="nav-link">О компании</a>
+            </li>
+          </ul>
+        </nav>
+    </div>
     
     <header class="header header_contacts">
         <nav>
@@ -228,10 +248,30 @@
                                         Et tortor consequat i
                                         d porta nibh venenatis cras sed felis.
                                     </div>
-                                    <div class="accordion__content_img">
-                                        <img src="img/conditioning/conditioning_icon.jpg" alt="">
-                                        <img src="img/conditioning/conditioning_icon.jpg" alt="">
-                                        <img src="img/conditioning/conditioning_icon.jpg" alt="">
+                                    <div class="gallery">
+                                        <div class="container">
+                                          <div class="card">
+                                            <div class="card-image">
+                                              <a href="img/conditioning/conditioning_icon.jpg" data-fancybox="gallery">
+                                                <img src="img/conditioning/conditioning_icon.jpg" alt="Image Gallery">
+                                              </a>
+                                            </div>
+                                          </div>
+                                          <div class="card">
+                                            <div class="card-image">
+                                              <a href="img/conditioning/conditioning_icon.jpg" data-fancybox="gallery">
+                                                <img src="img/conditioning/conditioning_icon.jpg" alt="Image Gallery">
+                                              </a>
+                                            </div>
+                                          </div>
+                                          <div class="card">
+                                            <div class="card-image">
+                                              <a href="img/conditioning/conditioning_icon.jpg" data-fancybox="gallery">
+                                                <img src="img/conditioning/conditioning_icon.jpg" alt="Image Gallery">
+                                              </a>
+                                            </div>
+                                          </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -400,6 +440,9 @@
     <script src="js/libs.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/services.js"></script>
+    <script src="js/humburger.js"></script>
+    <script src="js/close.js"></script>
+    <script src="js/gallery.js"></script>
 
 </body>
 </html>
