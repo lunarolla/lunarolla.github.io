@@ -1,0 +1,255 @@
+.main_content
+	height: 100vh
+	background: url(../img/conditioning/conditioning_header_bg.jpg) center center/cover no-repeat 
+	display: flex
+	align-items: center
+	&_img
+		min-height: 450px
+		background: url(../img/conditioning/header_content_bg.png) center center/cover no-repeat 
+		&_text
+			display: flex
+			justify-content: center
+			align-items: flex-start
+			flex-direction: column
+			padding: 20px 44px
+			&_header
+				cursor: default
+				font-weight: 600
+				font-size: 24px
+				line-height: 29px
+				color: #000000
+				span
+					color: #2553DE
+			&_subheader
+				cursor: default
+				padding: 24px 0
+				font-weight: 500
+				font-size: 18px
+				line-height: 22px
+				color: #000000
+			&_btn
+				width: 255px
+				height: 52px
+				margin-top: 0px
+		&_img
+			display: flex
+			justify-content: flex-end
+			img
+				width: 445px
+				height: 445px
+
+.fill_form
+	cursor: default
+	display: flex
+	align-items: center
+	padding: 40px 0
+	min-height: 400px
+	background: url(../img/conditioning/fill_form_bg.jpg) center center/cover no-repeat 
+	&_text
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: flex-start
+		font-size: 36px
+		line-height: 44px
+		color: #000000
+		font-weight: bold
+		div
+			padding-top: 24px
+			font-size: 18px
+			line-height: 22px
+			font-weight: 500
+	&_subheader
+		display: flex
+		justify-content: center
+		align-items: center
+
+.project
+	padding: 60px 0 
+	background: #f7f7f7
+	&_header	
+		cursor: default
+		padding-bottom: 40px
+		font-weight: 600
+		font-size: 28px
+		line-height: 34px
+		color: #000000
+
+input[type=text_services] 
+	height: 40px
+	width: 100%
+	padding: 11px 18px
+	margin: 20px auto 0 
+	border: 1px solid #DCDCDC
+	box-sizing: border-box
+	border-radius: 3px
+	background-color: #F5F5F5
+	color: black
+	display: block
+	&:focus
+		outline: none
+		border: 1px solid #A2A2A2
+		box-sizing: border-box
+		border-radius: 3px
+
+.form_to_call
+	background: #f7f7f7
+	&_header
+		font-weight: 600
+		font-size: 28px
+		line-height: 34px
+		color: #000000
+		cursor: default
+	&_area
+		width: 100%
+		height: 200px
+	&_btn
+		width: 100%
+
+.header_promobtn_services
+	width: 100%
+	height: 40px
+	margin: 20px auto 0 
+	border-radius: 3px
+	font-size: 14px
+	border: none
+	&:focus
+		outline: none
+		box-sizing: border-box
+		border-radius: 3px
+
+.services_services
+	background: #f7f7f7
+	&_header
+		font-size: 28px
+	&_items
+		line-height: 22px
+		a
+			font-weight: 500
+			height: 150px
+			font-size: 18px
+			padding: 25px 25px
+
+.collapse
+	padding: 60px 0
+	height: 100%
+	background: #f7f7f7
+
+.accordion
+	ul 
+		list-style: none
+		padding: 0
+
+.accordion_2
+	ul 
+		list-style: none
+		padding: 0
+
+.accordion__title
+	position: relative
+	height: 82px
+	border-right: 1px solid #dcdcdc
+	border-left: 1px solid #dcdcdc
+	box-sizing: border-box
+	padding: 30px 40px
+	font-weight: 500
+	font-size: 18px
+	line-height: 22px
+	color: #7e7e7e
+	display: flex
+	justify-content: space-between
+	background: #f7f7f7
+	cursor: pointer
+	display: flex
+	align-items: center
+	&_1
+		border-top: 1px solid #dcdcdc
+
+.accordion__icon
+	width: 20px
+	height: 10px
+	background-image: url(../icons/conditiong/collapse/expand_more.svg)
+	background-repeat: no-repeat
+	transition: all .4s ease-in-out
+
+.accordion__content
+	max-height: 0
+	overflow: hidden
+	transition: all .8s ease-in-out
+	padding: 0 40px
+	cursor: default
+	border-bottom: 1px solid #dcdcdc
+	border-right: 1px solid #dcdcdc
+	border-left: 1px solid #dcdcdc
+	background-color: #f7f7f7
+	font-weight: 500
+	font-size: 15px
+	line-height: 18px
+	color: #000
+	ul
+		padding: 0
+		margin: 0
+		color: black
+		list-style: none
+		padding: 24px 0
+		li::before
+			content: "•"
+			color: #2553DE
+			font-weight: 900
+			padding-right: 5px
+		li 
+			ul 
+				padding: 0
+				margin: 0
+				color: black
+				list-style: none
+				padding: 0 15px
+				li::before
+					content: "-"
+					color: #2553DE
+					font-weight: 900
+					padding-right: 5px
+	p
+		padding: 24px 0
+		margin: 0
+	&_img
+		display: flex
+		justify-content: space-between
+		box-sizing: border-box
+		padding: 30px 0
+		img
+			width: 324px
+			height: 216px
+	&_header
+		font-weight: bold
+		font-size: 16px
+		line-height: 20px
+		&_1
+			padding-top: 24px
+	&_text
+		line-height: 18px
+
+.active
+	.accordion__content
+		max-height: 1400px
+	.accordion__content_2
+		max-height: 1400px
+	.accordion__icon
+		transform: rotate(180deg)
+
+hr 
+	background-color: #dcdcdc
+	border-top: 1px solid #dcdcdc
+	border-right: 1px solid #dcdcdc
+	border-left: 1px solid #dcdcdc
+	border-bottom: none
+	color: #dcdcdc
+	margin: 0px
+
+
+
+
+
+
+
+
