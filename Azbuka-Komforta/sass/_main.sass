@@ -1,0 +1,460 @@
+*
+	font-family: 'Montserrat', sans-serif
+
+.dropdown 
+	display: inline-block
+
+.dropdown-content 
+	display: none
+	position: absolute
+	background-color: #fff
+	min-width: 232px
+	z-index: 1
+	top: 45px
+	&::before
+		height: 14px
+		position: absolute
+		top: -14px
+		width: 233px
+		content: " "
+		display: block
+
+.dropdown-content>a 
+	font-weight: 500
+	font-size: 12px
+	color: #000000
+	padding: 14px 14px
+	text-decoration: none
+	display: block
+	border-bottom: 1px solid #e5e5e5
+	transition: 0.3s
+
+.dropdown-content>a:nth-child(2)
+	padding: 21px 14px
+
+.dropdown-content>a:hover 
+		color: #2553DE
+
+.dropdown
+	&:hover
+		.dropdown-content 
+			display: block
+
+.header
+	height: 100%
+	background: url(../img/index/index_bg.jpg) center center/cover no-repeat 
+	nav
+		padding: 22px 0
+	&_logo
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		overflow: hidden
+		text-decoration: none
+	&_menu
+		display: flex
+		justify-content: center
+		align-items: center
+		&_item
+			margin-right: 30px
+		&_item>a
+			text-decoration: none
+			font-weight: 500
+			font-size: 14px
+			color: #FBFBFB
+		&_item>a::after
+			content: ''
+			display: block
+			width: 0
+			height: 1px
+			background: #ffffff
+			transition: width 0.5s
+		&_item>a:hover::after
+			width: 100%
+	&_menu>ul 
+		list-style-type: none
+		display: flex
+		flex-direction: row
+		margin: 0
+		padding: 0
+	&_info
+		display: flex
+		flex-direction: column
+		align-items: flex-end
+		&_email
+			padding-top: 12px
+			font-weight: 500
+			font-size: 12px
+		&_phone
+			font-weight: 500
+			font-size: 12px
+		&_phone>a, &_email>a
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #fbfbfb
+			transition: 0.5s
+		&_phone>a:hover, &_email>a:hover
+			text-decoration: none
+			color: #a5a4a4
+		&_img
+			padding-right: 6px
+	&_info>div
+		display: flex
+		align-items: flex-start
+		flex-direction: column
+	&_promotext
+		height: 100vh
+		display: flex
+		align-items: center
+		font-size: 28px
+		line-height: 34px
+		font-weight: 700
+		color: #FBFBFB
+		text-align: left
+		cursor: default
+	&_promobtn
+		margin-top: 34px
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		height: 52px
+		background: #2553DE
+		cursor: pointer
+		box-sizing: border-box
+		border-radius: 3px
+		font-weight: 600
+		font-size: 16px
+		transition: 0.3s
+		color: #FFFFFF
+		outline: none
+	&_promobtn:hover
+		background: #103AB7
+		text-decoration: none
+		color: #FFFFFF
+		outline: none
+	&_promobtn:focus
+		outline: none
+
+.border_menu_item
+	&::after
+		width: 100% !important
+	
+.services
+	background: #f7f7f7
+	padding: 60px 0 60px 0
+	height: 100%
+	display: flex
+	align-items: center
+	&_header
+		font-weight: 600
+		font-size: 28px
+		color: #000000
+		cursor: default
+	&_items
+		padding-top: 30px
+	&_items>a
+		padding: 10px 10px
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 124px
+		background-color: #F5F5F5
+		border: 1px solid #DCDCDC
+		box-sizing: border-box
+		border-radius: 3px
+		font-weight: 500
+		font-size: 18px
+		color: #000000
+		text-decoration: none
+	&_items>a>img
+			padding-right: 16px
+			height: 60px
+			width: 60px
+	&_items
+		a:hover
+			background-color: #ececec
+			border: 1px solid #DCDCDC
+
+.consultation
+	.row
+		align-items: center
+	padding: 40px 0
+	display: flex
+	justify-content: center
+	align-items: center
+	background: #2553DE
+	&_img
+		display: flex
+		align-items: center
+		font-weight: 500
+		font-size: 20px
+		line-height: 24px
+		color: #FFFFFF
+		cursor: default
+	&_img>img
+		padding-right: 34px	
+		height: 65px
+		object-fit: contain
+	&_box
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+		height: 52px
+		background: #2553DE
+		cursor: pointer
+		border: 2px solid #FFFFFF
+		box-sizing: border-box
+		border-radius: 3px
+		font-weight: 600
+		font-size: 16px
+		transition: 0.3s
+		color: #FFFFFF
+		outline: none
+	&_box:hover
+		background: #FFFFFF
+		border: 2px solid #FFFFFF
+		color: #1E1E1E
+		outline: none
+		text-decoration: none
+	&_box:focus
+		outline: none
+
+.footer
+	background: #EAEAEA
+	padding-top: 16px
+	padding-bottom: 16px
+	&_items
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+		&_header
+			font-size: 12px
+			font-weight: 700
+			color: #1E1E1E
+			padding-top: 12px
+			list-style: none
+			cursor: default
+		&_info
+			display: flex
+			flex-direction: column
+			justify-content: flex-start
+		&_info>a
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-top: 12px
+			font-weight: 500
+			font-size: 12px
+			line-height: 15px
+			color: #555555
+			text-decoration: none
+			transition: 0.5s
+		&_info>a:hover
+			color: #8d8b8b
+		&_info>a
+			img
+				padding-right: 7px
+	&_icons
+		display: flex
+		justify-content: center
+		padding-top: 24px
+		display: flex
+		justify-content: center
+		align-items: center
+	&_icons>a
+		padding-right: 10px
+		transition: 0.5s
+	&_icons>a:hover
+		opacity: 0.7
+	&_icons>a:nth-child(5)
+		padding-right: 0px
+	&_text
+		font-weight: 500
+		font-size: 10px
+		color: #555555
+		text-align: center
+		padding: 16px 0 16px 0
+		cursor: default
+
+.white-popup
+	position: relative
+	background: #EDEDED
+	width: 720px
+	height: 600px
+	margin: 0 auto
+	padding: 60px 30px
+
+.mfp-zoom-in 
+	&.mfp-ready 
+		.mfp-with-anim 
+			opacity: 1 
+			transform: scale(1) 
+	.mfp-with-anim 
+		opacity: 0 
+		transition: all 0.2s ease-in-out 
+		transform: scale(0.8) 
+	&.mfp-bg 
+		opacity: 0 
+		transition: all 0.3s ease-out 
+	&.mfp-ready 
+		&.mfp-bg 
+			opacity: 0.8 
+	&.mfp-removing 
+		.mfp-with-anim 
+			transform: scale(0.8) 
+			opacity: 0 
+		&.mfp-bg 
+			opacity: 0 
+
+.mfp-close:focus
+	outline: none
+
+input[type=text] 
+	width: 30vw
+	height: 40px
+	padding: 11px 18px
+	margin: 20px auto 0 
+	border: 1px solid #DCDCDC
+	box-sizing: border-box
+	border-radius: 3px
+	background-color: #F5F5F5
+	color: black
+	display: block
+	&:focus
+		outline: none
+		border: 1px solid #A2A2A2
+		box-sizing: border-box
+		border-radius: 3px
+
+textarea 
+	display: block
+	margin: 20px auto 0 
+	width: 30vw
+	height: 120px
+	padding: 12px 20px
+	border: 1px solid #DCDCDC
+	box-sizing: border-box
+	border-radius: 3px
+	background-color: #F5F5F5
+	font-size: 16px
+	resize: none
+	&:focus
+		outline: none
+		border: 1px solid #A2A2A2
+		box-sizing: border-box
+		border-radius: 3px
+
+input[type=button]
+	display: block
+	margin: 30px auto 0
+	width: 30vw
+	height: 40px
+	background: #2553DE
+	border-radius: 3px
+	outline: none
+	border: none
+	font-weight: 500
+	font-size: 14px
+	color: #FFFFFF
+	transition: 0.3s
+	cursor: pointer
+	&:hover
+		background: #103AB7
+	&:focus
+		outline: none
+
+.modal
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	&_header
+		font-weight: 600
+		font-size: 30px
+		line-height: 37px
+		color: #000000 
+		text-align: center
+	&_text
+		font-weight: 500
+		font-size: 14px
+		line-height: 17px
+		color: #A2A2A2
+		text-align: center
+
+.container_humb
+	position: relative
+
+.nav-bar
+	position: fixed
+	background-color: #dcdcdc
+	top: 0
+	left: -25rem
+	height: 100%
+	width: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	transition: 0.5s ease-out
+	z-index: 1
+
+.toggle
+	left: 0
+	// box-shadow: 1px 0 15px 2px rgba(0, 0, 0, 0.4)
+
+.toggle-menu
+	background-color: rgba(0, 0, 0, 0.2)
+	position: fixed
+	top: 17px
+	left: 2rem
+	width: 4rem
+	height: 3rem
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	padding: 0.2rem 0.5rem
+	border-radius: 0.5rem
+
+.line
+	width: 100%
+	height: 4px
+	border-radius: 5px
+	background-color: #fff
+	transition: 0.2s ease-out
+
+.toggle
+	.line1
+		background-color: #555555
+		transform: scale(0.9) rotateZ(-40deg) translate(-10px, 10px)
+	.line2
+		display: none
+	.line3
+		background-color: #555555
+		transform: scale(0.9) rotateZ(40deg) translate(-6px, -5px)
+	.toggle-menu
+		background-color: white
+
+.nav-list
+	list-style: none
+	padding: 0
+
+.nav-list-item
+	text-align: center
+	padding: 1rem 0
+	a:hover
+		text-decoration: none
+		color: #555555
+
+.nav-link
+	color: #555555
+	font-size: 24px
+	font-weight: 500
+	text-decoration: none
+	position: relative
+	padding-bottom: 0.4rem
+
+.container_humb
+	display: none
