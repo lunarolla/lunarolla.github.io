@@ -49,6 +49,14 @@ function w3RemoveClass(element, name){
 }
 
 $(document).ready(function() {
+
+	$('div.promo_arrow').click(function(e) 
+	{ 
+	 $([document.documentElement, document.body]).animate({
+		 scrollTop: $($(this).find("a").attr('href')).offset().top
+	 }, 3000);
+	});
+
 	$('ul.burger-ul li').click(function(e) 
 	{ 
 	 $("#burger").prop("checked", false);
