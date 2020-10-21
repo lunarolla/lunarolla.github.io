@@ -1,0 +1,58 @@
+body, canvas 
+{ 
+    display : inline-block; 
+}
+
+canvas, img#animation_preview 
+{ 
+    border : 1px solid black; 
+}
+
+div#left {
+    display : inline-block;
+    width : 540px;
+    margin-bottom: 30px;
+}
+
+input[type=number] 
+{ 
+    padding: 5px;
+    width : 100px;
+    margin-bottom: 10px; 
+    height: 25px;
+    border-radius: 0%;
+    border : 1px solid black;
+}
+
+.label 
+{
+    display : inline-block;
+    width: 200px;
+}
+
+.container
+{
+    text-align: center;
+}
+
+html
+{
+    width: 100%;
+}
+
+body
+{
+    display: block;
+    width: 950px;
+    margin: 0 auto;
+}
+
+h3, h4
+{
+    font-size: 25px;
+}
+
+p, .label
+{
+    font-size: 20px;
+}

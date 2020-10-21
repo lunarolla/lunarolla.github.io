@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Галицька Ольга</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="lib/jquery-3.2.0.min.js"></script>
+    <script src="levy-c-curve.js"></script>
+    <script src="main.js"></script>
+  </head>
+
+  <body class="container"> 
+    <h3>Лабораторна робота № 3 Двовимірні фрактали</h3>
+    <h4>Виконала студентка групи 6_04_122_010_19_1 Галицька Ольга</h4>
+    <p>Крива Леві</p>
+    <div id="left">
+      <div class="label">Кількість ітерацій:</div> <input type="number" id="iterations" value="10" step="1" min="0" /><br/>
+      <div class="label">Ширина лінії:</div> <input type="number" id="line_width" value="2" step="1" min="1" /><br/>
+      <div class="label">Затримка анімації:</div> <input type="number" id="anim_speed" value="100" step="50" /><br/>
+    </div>
+    <canvas id="my_canvas" width="820" height="540"></canvas>
+  </body>
+  
+</html>
