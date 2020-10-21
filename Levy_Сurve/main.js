@@ -13,7 +13,7 @@ $( document ).ready( function() {
 
     var default_angle   = 45;
 
-    var colors = [ '#fc0398', '#fc0398', '#fc0398', '#fc0398' ];
+    var colors = [ '#fc0398', '#00CC00', '#FFFF00', '#123EAB' ];
     
     var toRadians = function( d ) {
     return Math.PI*(d/180.0);
