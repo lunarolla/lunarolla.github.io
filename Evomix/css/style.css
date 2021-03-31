@@ -1350,13 +1350,18 @@ img.button-icon {
     justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
+    border: none;
+}
+
+.way-to-use-icon:focus {
+    outline: none;
 }
 
 .way-to-use-icon p {
     margin: 0;
 }
 
-.way-to-use-icon-container div:first-child{
+.way-to-use-icon-container button:first-child{
     width: 320px;
     height: 65px;
     background: #8BC43F;
@@ -1369,7 +1374,7 @@ img.button-icon {
     color: #000000;
 }
 
-.way-to-use-icon-container div:last-child{
+.way-to-use-icon-container button:last-child{
     width: 320px;
     height: 65px;
     background: #21A396;
@@ -1382,7 +1387,7 @@ img.button-icon {
     color: #000000;
 }
 
-.way-to-use-icon-container div:nth-child(2){
+.way-to-use-icon-container button:nth-child(2){
     width: 320px;
     height: 65px;
     background: #F0E500;
@@ -1473,15 +1478,24 @@ img.button-icon {
     border: 3px solid #21A396;
 }
 
-.cear-header-button:focus {
-    outline: none;
+.cear-header-button:hover {
+    background: transparent !important;
+    transition: 0.3s !important;
+    color: #E84910 !important;
+    border: 3px solid #E84910 !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.cear-header-button:hover {
-    background: transparent;
-    transition: 0.3s;
-    color: #E84910;
-    border: 3px solid #E84910;
+.cear-header-button:focus {
+    outline: none !important;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
 }
 
 .methodofuse-btn:hover, .methodofuse-krs-btn:hover {
@@ -1990,7 +2004,7 @@ img.button-icon {
 
 .methodofuse-krs {
     background-image:  url(../img/methodofuse-krs.jpg);
-    height: 2100px;
+    height: 1800px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2021,8 +2035,6 @@ img.button-icon {
 }
 
 .methodofuse-chiken-header {
-    position: absolute;
-    top: 1800px;
     font-family: Arial;
     font-style: normal;
     font-weight: bold;
@@ -2302,16 +2314,16 @@ img.button-icon {
     z-index: 10000;
 }
 
-.chicken-icon:nth-child(3) ul>li::marker {
+.chicken-icon:nth-child(4) ul>li::marker {
     content: url(../img/svg/li-icon-green.svg);
 }
 
-.chicken-icon:nth-child(3) {
-    height: 385px;
+.chicken-icon:nth-child(4) {
+    height: 485px;
     margin: 0 0 40px 0;
 }
 
-.chicken-icon:nth-child(2) {
+.chicken-icon:nth-child(3) {
     height: 260px;
     margin: 40px 0;
 }
@@ -2330,19 +2342,19 @@ img.button-icon {
     position: absolute;
     height: 125px;
     left: 87%;
-    top: 45px;
+    top: 375px;
 }
 
 .chicken-icon-img-two {
     position: absolute;
     height: 125px;
     left: 87%;
-    top: 338px;
+    top: 750px;
 }
 
 .chicken {
     background-image:  url(../img/chicken.jpg);
-    height: 1000px;
+    height: 1700px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2359,6 +2371,107 @@ img.button-icon {
     align-items: center;
 }
 
+ .modal-open{
+    overflow:auto;
+    padding-right:0 !important;
+}
+
+.modal-dialog {
+    height: 50%;
+    width: 18%;
+}
+
+.modal-content {
+    height: 500px;
+}
+
+.modal-header .close {
+    padding: 15px;
+}
+
+.modal-title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    color: #E84910;
+
+}
+
+.modal-description {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #E1E1E1;
+    margin: 0;
+}
+
+.modal-input{
+    border: 2.47315px solid #DCDCDC;
+    box-sizing: border-box;
+    border-radius: 69.2483px;
+    padding: 10px;
+    width: 250px;
+    font-size: 15px;
+    color: #C4C4C4;
+}
+
+.modal-input:focus, .modal-input:active {
+    outline: none;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px !important;
+}
+
+.modal-content, .modal-header {
+    background-color: white;
+}
+
+.modal-footer {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 10px 20px 10px;
+}
+
+.modal-btn {
+    width: 250px;
+    height: 45px;
+    background: #21A396;
+    border-radius: 69.2483px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.modal-btn:focus, .modal-btn:hover {
+    background: transparent;
+    border: 1px solid #21A396;
+    color: #21A396;
+    outline: none;
+}
+
+.close:focus, .close:active {
+    outline: none;
+}
+
+#exampleModal{
+    display: none;
+}
+
+#exampleModalSecond{
+    display: none;
+}
+
+
 @media (max-width: 360px) {
     html, body {
         width: 100%;
@@ -2370,14 +2483,13 @@ img.button-icon {
 
 @media (max-width: 1540px) {
 
+    .modal-dialog {
+        width: 25%;
+    }
+
     .methodofuse-krs-btn {
         position: absolute;
         top: 1750px;
-    }
-
-    .methodofuse-chiken-header {
-        position: absolute;
-        top: 1870px;
     }
 
     .methodofuse-krs-icon-img {
@@ -2510,6 +2622,11 @@ img.button-icon {
 }
 
 @media (max-width: 1200px) {
+
+    .modal-dialog {
+        width: 40%;
+    }
+
     .footer {
         height: 1700px;
     }
@@ -2539,12 +2656,12 @@ img.button-icon {
 
     .chicken-icon-img-one {
         left: 85%;
-        top: 84px;
+        top: 325px;
     }
 
     .chicken-icon-img-two {
         left: 85%;
-        top: 437px;
+        top: 715px;
     }
 
     .methodofuse-chiken-header {
@@ -2608,7 +2725,7 @@ img.button-icon {
 
     .chicken {
         background-size: cover;
-        height: 1200px;
+        height: 1400px;
     }
 
     .cear-header {
@@ -2713,6 +2830,14 @@ img.button-icon {
 
 @media (max-width: 991px) {
 
+    .modal-dialog {
+        width: 60%;
+    }
+
+    .modal-input, .modal-btn {
+        width: 300px;
+    }
+
     .footer-icons-header {
         font-size: 30px;
     }
@@ -2738,15 +2863,11 @@ img.button-icon {
     }
 
     .chicken-icon:nth-child(3) {
-        height: 450px;
+        height: 500px;
     }
 
     .chicken {
-        height: 1400px;
-    }
-
-    .chicken-icon:nth-child(2) {
-        height: 500px;
+        height: 1800px;
     }
 
     .chicken-icon-box {
@@ -2759,19 +2880,19 @@ img.button-icon {
 
     .chicken-icon-img-one {
         left: 80%;
-        top: 80px;
+        top: 340px;
     }
     
     .chicken-icon-img-two {
         left: 80%;
-        top: 640px;
+        top: 925px;
     }
 
     .methodofuse-krs-icon-img {
         position: absolute;
         height: 170px;
         left: 73%;
-        top: 1520px;
+        top: 1440px;
     }
 
     .cear-header-header, .methodofuse-header, .composition-header, .components-header, .cear-main-header, .cear-main-header, .methodofuse-description, .methodofuse-krs-header, .methodofuse-chiken-header, .footer-header {
@@ -2921,6 +3042,19 @@ img.button-icon {
 }
 
 @media (max-width: 768px) {
+
+    .modal-dialog {
+        width: 80%;
+    }
+
+    .modal-input, .modal-btn {
+        width: 350px;
+    }
+
+    .modal-title {
+        font-size: 35px;
+    }
+
     .methodofuse-icon:nth-child(2), .methodofuse-icon:nth-child(3), .methodofuse-icon:nth-child(4), .methodofuse-icon:nth-child(5), .methodofuse-icon:nth-child(6), .methodofuse-icon:nth-child(7) {
         width: 100%;
     }
@@ -2956,7 +3090,7 @@ img.button-icon {
 
     .methodofuse-krs-icon-img {
         left: 65%;
-        top: 1600px;
+        top: 1490px;
     }
 
     .methodofuse-krs-icon img:nth-child(1) {
@@ -3093,12 +3227,12 @@ img.button-icon {
 
     .chicken-icon-img-one {
         left: 73%;
-        top: 195px;
+        top: 470px;
     }
 
     .chicken-icon-img-two {
         left: 73%;
-        top: 830px;
+        top: 1060px;
     }
 
     .chicken-icon:nth-child(2) {
@@ -3193,6 +3327,41 @@ img.button-icon {
 }
 
 @media (max-width: 576px) {
+
+    .modal-body {
+        padding: 10px !important;
+    }
+
+    .modal-header {
+        padding: 10px !important;
+    }
+
+    .modal-dialog {
+        width: 80%;
+    }
+
+    .modal-title {
+        font-size: 30px;
+    }
+
+    .modal-btn {
+        height: 40px;
+    }
+
+    .modal-input, .modal-btn {
+        width: 200px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .modal-description {
+        font-size: 12px;
+    }
+
+    .modal-content {
+        height: 370px;
+    }
+
     .cear-header-img {
         width: 155px;
         height: 160px;

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evomix</title>
-    <!-- CSS only -->
+    
     <link href="./css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="./css/bootstrap.min.css.map" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -18,7 +18,7 @@
                     <img src="./img/svg/cear.svg" alt="cear" class="cear-header-img">
                     <h1 class="cear-header-header">как увеличить привес до 5% в год?</h1>
                     <p class="cear-header-description">Благодаря профилактике использования “Забота”</p>
-                    <button class="cear-header-button">заказать</button>
+                    <button  type="button" class="cear-header-button" data-toggle="modal" data-target="#exampleModal">заказать</button>                    
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                         <img src="./img/svg/pigmain.svg" alt="cow">
                         <p>Укрепляет иммунитет животных и снижает расходы на их содержание. Предназначен для использования в местах содержания и отдыха с/х животных в промышленном и частном подворье.</p>
                     </div>
-                    <button class="cear-main-btn">заказать</button>
+                    <button class="cear-main-btn" data-toggle="modal" data-target="#exampleModal">заказать</button>
                 </div>
             </div>
         </div>
@@ -107,7 +107,7 @@
                         </ul>
                         <img class="components-icon-img-four" src="./img/svg/iconbgcomponents.svg" alt="icon-bg">
                     </div>
-                    <button class="components-btn">заказать</button>
+                    <button class="components-btn" data-toggle="modal" data-target="#exampleModal">заказать</button>
                 </div>
             </div>
         </div>
@@ -119,25 +119,25 @@
                 <div class="way-to-use-container col-xl-12">
                     <h1 class="way-to-use-header">способ использования</h1>
                     <div class="way-to-use-icon-container">
-                        <div class="way-to-use-icon">
+                        <button class="way-to-use-icon" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                             <p class="way-to-use-icon-text">свиноводство</p>
                             <img src="./img/svg/pigway.svg" alt="pig" class="way-to-use-icon-img">
-                        </div>
-                        <div class="way-to-use-icon">
+                        </button>
+                        <button class="way-to-use-icon" type="button" data-toggle="collapse" data-target="#collapseThirdExample" aria-expanded="false" aria-controls="collapseThirdExample">
                             <p class="way-to-use-icon-text">птицеводство</p>
                             <img src="./img/svg/chickenway.svg" alt="chicken" class="way-to-use-icon-img">
-                        </div>
-                        <div class="way-to-use-icon">
+                        </button>
+                        <button class="way-to-use-icon" type="button" data-toggle="collapse" data-target="#collapseSecondExample" aria-expanded="false" aria-controls="collapseSecondExample">
                             <p class="way-to-use-icon-text">КРС</p>
                             <img src="./img/svg/cowway.svg" alt="cow" class="way-to-use-icon-img">
-                        </div>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="methodofuse">
+    <section class="collapse methodofuse" id="collapseExample">
         <div class="container">
             <div class="row">
                 <div class="methodofuse-container col-xl-12">
@@ -171,13 +171,13 @@
                             <p>меньший<br>расход<br>подстилки</p>
                         </div>
                     </div>
-                    <button class="methodofuse-btn">Получить КП</button>
+                    <button class="methodofuse-btn" data-toggle="modal" data-target="#exampleModalSecond">Получить КП</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="methodofuse-krs">
+    <section class="collapse methodofuse-krs" id="collapseSecondExample">
         <div class="container">
             <div class="row">
                 <div class="methodofuse-krs-container col-xl-12">
@@ -192,7 +192,7 @@
                     </div>
                     <div class="methodofuse-krs-icon">
                         <span>Новорожденные телята</span>
-                        <p>При рождении теленка в первые минуты жизни необходимо обработать его присыпкой из расчета 250 г/гол, что позволяет избежать попадание бактерий в пупочный канат и способствует сохранению теплоустойчивости, сокращает время между рождением и первым приемом молозива.</p>
+                        <p>При рождении теленка в первые минуты жизни необходимо обработать его присыпкой из расчета 250 г/гол, что позволяет избежать попадание бактерий в пупочный канат и способствует сохранению теплоустойчивости, сокращает времямежду рождением и первым приемом молозива.</p>
                     </div>
                     <div class="methodofuse-krs-icon">
                         <p>Рассыпать можно вручную или с помощью специального распылительного устройства.
@@ -210,17 +210,17 @@
                         </ul>
                         <img class="methodofuse-krs-icon-img" src="./img/svg/iconbgcomponents.svg" alt="icon-bg">
                     </div>
-                    <button class="methodofuse-krs-btn">Получить КП</button>
-                    <div class="methodofuse-chiken-header">Способ применения в птицеводстве</div>
+                    <button class="methodofuse-krs-btn" data-toggle="modal" data-target="#exampleModalSecond">Получить КП</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="chicken">
+    <section class="collapse chicken" id="collapseThirdExample">
         <div class="container">
             <div class="row">
                 <div class="chicken-container col-xl-12">
+                    <p class="methodofuse-chiken-header">Способ применения в птицеводстве</p>
                     <div class="chicken-icon">
                         <img src="./img/svg/house.svg" alt="one">
                         <ul>
@@ -266,7 +266,7 @@
                             <li>снижает размножение эктопаразитов, личинок насекомых, развивающихся в подстилке</li>
                         </ul>
                     </div>
-                    <button class="components-btn">Получить КП</button>
+                    <button class="components-btn" data-toggle="modal" data-target="#exampleModalSecond">Получить КП</button>
                 </div>
             </div>
         </div>
@@ -366,6 +366,53 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal-cear modal fade " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">Заказать</h5>
+                <p class="modal-description">введите данные и мы свяжемся с вами в ближайшкк время</p>
+            </div>
+            <fom class="modal-body">
+                <input type="text" class="modal-input" placeholder="Введите имя">
+                <input type="text" class="modal-input" placeholder="+380">
+                <input type="text" class="modal-input" placeholder="Введите почту">
+                <input type="text" class="modal-input" placeholder="Комментарий">
+            </fom>
+            <div class="modal-footer">
+                <button type="button" class="modal-btn">Отправить</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="modal-cear modal fade " id="exampleModalSecond" tabindex="-2" role="dialog" aria-labelledby="exampleModalSecondLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalSecondLabel">Получить КП</h5>
+                <p class="modal-description">введите данные и мы свяжемся с вами в ближайшкк время</p>
+            </div>
+            <fom class="modal-body">
+                <input type="text" class="modal-input" placeholder="Введите имя">
+                <input type="text" class="modal-input" placeholder="+380">
+                <input type="text" class="modal-input" placeholder="Введите почту">
+                <input type="text" class="modal-input" placeholder="Комментарий">
+            </fom>
+            <div class="modal-footer">
+                <button type="button" class="modal-btn">Отправить</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
     <script src="./js/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
 </body>
