@@ -1402,7 +1402,7 @@ img.button-icon {
 
 .methodofuse {
     background-image:  url(../img/methodofuse.jpg);
-    height: 2100px;
+    height: 2200px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -3328,6 +3328,14 @@ img.button-icon {
 
 @media (max-width: 576px) {
 
+    .chicken-icon:nth-child(4) {
+        height: 685px;
+    }
+
+    .modal-dialog {
+        margin: 0 auto;
+    }
+
     .modal-body {
         padding: 10px !important;
     }
@@ -3510,9 +3518,13 @@ img.button-icon {
         display: none;
     }
 
+    .chicken {
+        height: 2200px;
+    }
+
     .chicken-icon {
         height: 300px;
-        padding: 15px;
+        padding: 20px;
     }
 
     .chicken-icon-header {
